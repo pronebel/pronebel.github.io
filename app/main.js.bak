@@ -19,11 +19,11 @@ require.config({
 		}
 	},
 	paths: {
-		jquery: 'js/lib/jquery',
-		underscore: 'js/lib/underscore',
-		backbone: 'js/lib/backbone/backbone',
-		backboneLocalstorage: 'js/lib/backbone/backbone.localStorage',
-		text: 'js/lib/require/text'
+		jquery: 'lib/jquery',
+		underscore: 'lib/underscore',
+		backbone: 'lib/backbone/backbone',
+		backboneLocalstorage: 'lib/backbone/backbone.localStorage',
+		text: 'lib/require/text'
 	}
 });
 
