@@ -1,8 +1,8 @@
 define([
 	'jquery',
 	'backbone',
-	'collections/todos',
-	'common'
+	'todos/collections/todos',
+	'todos/common'
 ], function( $, Backbone, Todos, Common ) {
 
 	var Workspace = Backbone.Router.extend({
