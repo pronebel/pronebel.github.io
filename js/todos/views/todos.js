@@ -2,8 +2,8 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!templates/todos.html',
-	'common'
+	'text!todos/templates/todos.html',
+	'todos/common'
 ], function( $, _, Backbone, todosTemplate, Common ) {
 
 	var TodoView = Backbone.View.extend({

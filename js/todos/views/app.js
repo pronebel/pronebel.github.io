@@ -2,10 +2,10 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'collections/todos',
-	'views/todos',
-	'text!templates/stats.html',
-	'common'
+	'todos/collections/todos',
+	'todos/views/todos',
+	'text!todos/templates/stats.html',
+	'todos/common'
 ], function( $, _, Backbone, Todos, TodoView, statsTemplate, Common ) {
 
 	var AppView = Backbone.View.extend({

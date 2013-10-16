@@ -2,7 +2,7 @@ define([
 	'underscore',
 	'backbone',
 	'backboneLocalstorage',
-	'models/todo'
+	'todos/models/todo'
 ], function( _, Backbone, Store, Todo ) {
 
 	var TodosCollection = Backbone.Collection.extend({

@@ -28,8 +28,8 @@ require.config({
 });
 
 require([
-	'views/app',
-	'routers/router'
+	'todos/views/app',
+	'todos/routers/router'
 ], function( AppView, Workspace ) {
 	// Initialize routing and start Backbone.history()
 	new Workspace();
