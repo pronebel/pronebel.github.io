@@ -49,6 +49,7 @@ define([
         },
         listRender:function(data){
             $("#J_blogList").html(this.blogTemplate({list:data}));
+
         }
 
 

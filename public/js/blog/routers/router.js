@@ -12,13 +12,8 @@ define(['jquery',
 
                 index : function() {
 
-                },
-                detail:function(file){
-                    var DetailView = require("blog/views/detail");
-                    var detailView = new DetailView();
-                    detailView.file = file;
-                    detailView.render();
                 }
+
 
             })
         }

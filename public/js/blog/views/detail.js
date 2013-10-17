@@ -21,11 +21,15 @@ define([
 
         },
 
-        render: function() {
+        render: function(file) {
 
             var that = this;
-            $.get('/article/data/'+this.file, function(data) {
-                that.$el.html(data);
+            console.log(file);
+            $.get('/article/data/'+file, function(data) {
+                that.$el.html(that.detailTemplate({
+                    article:data,
+                    file:file
+                }));
             });
         }
 

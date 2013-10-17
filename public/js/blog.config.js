@@ -28,14 +28,21 @@ require.config({
 });
 
 require([
-	'blog/views/app',
-	'blog/routers/router'
-], function( AppView, Routers ) {
+	'blog/views/app','blog/views/detail',
+	'blog/routers/router',"text!blog/templates/banner.html","text!blog/templates/header.html"
+], function( AppView, DetailView,Routers,bannerTemplate,headerTemplate ) {
 
     for(var router in Routers){
         new Routers[router];
     }
 
 	Backbone.history.start();
-    (new AppView()).render();
+    $("#J_banner").html(bannerTemplate);
+    $("#J_header").html(headerTemplate);
+
+    if(window.location.href.indexOf("detail.html")>-1){
+        (new DetailView()).render(location.search.replace("?",""));
+    }else{
+        (new AppView()).render();
+    }
 });

@@ -3,7 +3,7 @@
         var curItem= list[i];
     %>
     <li>
-        <a href="#detail/<%=encodeURIComponent(curItem.path)%>"><%=curItem.title%></a>
+        <a href="detail.html?<%=encodeURIComponent(curItem.path)%>"><%=curItem.title%></a>
         <%=curItem.desc%>
     </li>
     <%}%>
