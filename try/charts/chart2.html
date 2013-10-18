@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style></style>
+</head>
+<body>
+<script src="/public/js/lib/jquery.js"></script>
+<script src="lib/highstock/highstock.src.js"></script>
+
+<script src="dev/timedata.js"></script>
+
+
+<div id="container" style="height: 460px; min-width: 500px"></div>
+
+ <script>
+
+
+
+
+
+
+   // split the data set into ohlc and volume
+   var ohlc = [],
+           volume = [],
+           dataLength = data.length;
+
+   for (i = 0; i < dataLength; i++) {
+      /* ohlc.push([
+           data[i][0], // the date
+           data[i][1], // open
+           data[i][2], // high
+           data[i][3], // low
+           data[i][4] // close
+       ]);*/
+
+       ohlc.push([
+           data[i][0], // the date
+           data[i][5] // the volume
+       ])
+
+       volume.push([
+           data[i][0], // the date
+           data[i][5] // the volume
+       ])
+   }
+
+   // set the allowed units for data grouping
+   var groupingUnits = [[
+       'week',                         // unit name
+       [1]                             // allowed multiples
+   ], [
+       'month',
+       [1, 2, 3, 4, 6]
+   ]];
+
+   // create the chart
+   $('#container').highcharts('StockChart', {
+
+       rangeSelector: {
+           enabled: false
+       },
+
+       title: {
+           text: 'AAPL Historical'
+       },
+
+       yAxis: [{
+           title: {
+               text: '属性A'
+           },
+           height: 200,
+           lineWidth: 2
+       }, {
+           title: {
+               text: '属性B'
+           },
+           top: 260,
+           offset: 0,
+           height: 100,
+
+           lineWidth: 2
+       }],
+
+       series: [{
+           type:"area",
+           name: '属性A',
+           data: ohlc,
+           dataGrouping: {
+               units: groupingUnits
+           }
+       }, {
+           type: 'column',
+           name: '属性B',
+           data: volume,
+           yAxis: 1,
+           dataGrouping: {
+               units: groupingUnits
+           }
+       },
+           {
+               type : 'flags',
+               data : [{
+                   x : Date.UTC(2011, 3, 25),
+                   title : 'H'
+
+               }, {
+                   x : Date.UTC(2010, 3, 28),
+                   title : 'G'
+
+               }],
+
+               shape : 'circlepin',
+               width : 11
+           }]
+   });
+
+ </script>
+</body>
+</html>
