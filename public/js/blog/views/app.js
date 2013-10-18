@@ -29,15 +29,9 @@ define([
             this.getList();
         },
         getTags:function(){
-            var that = this;
-            $.getJSON('/article/index/tag.json', function(data) {
-                console.log(data);
-                 that.tagMenuRender(data);
-            });
+            $("#sidebar").html(this.menuTemplate({}));
         },
-        tagMenuRender:function(data){
-            $("#sidebar").html(this.menuTemplate({tags:data}));
-        },
+
         getList:function(){
 
             var that = this;

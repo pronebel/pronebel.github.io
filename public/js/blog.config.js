@@ -29,15 +29,15 @@ require.config({
 
 require([
 	'blog/views/app','blog/views/detail',
-	'blog/routers/router',"text!blog/templates/banner.html","text!blog/templates/header.html"
-], function( AppView, DetailView,Routers,bannerTemplate,headerTemplate ) {
+	'blog/routers/router',"text!blog/templates/header.html"
+], function( AppView, DetailView,Routers,headerTemplate ) {
 
     for(var router in Routers){
         new Routers[router];
     }
 
 	Backbone.history.start();
-    $("#J_banner").html(bannerTemplate);
+
     $("#J_header").html(headerTemplate);
 
     if(window.location.href.indexOf("detail.html")>-1){

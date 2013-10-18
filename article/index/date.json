@@ -2,22 +2,19 @@
     {
         "path":"tag+name.md",
         "tag": "css",
-        "date": "date",
-        "desc": "描述",
-        "title":"dddd"
+        "date": "2012-03-11",
+        "title":"测试2"
     },
     {
         "path":"article_template.md",
         "tag": "css",
-        "date": "date",
-        "desc": "描述",
-        "title":"dddd"
+        "date": "2012-03-11",
+        "title":"测试2"
     },
     {
         "path":"css_中文测试.md",
         "tag": "css",
-        "date": "date",
-        "desc": "描述",
+        "date": "2012-03-11",
         "title":"css_中文测试"
     }
 

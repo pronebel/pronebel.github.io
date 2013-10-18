@@ -1,7 +1,13 @@
+<%
+var converter = new Showdown.converter();
 
 
-<div style="border:1px solid red;">
-    <%=article%>
+
+%>
+
+<div class="blog-detail">
+
+    <%= converter.makeHtml(article)%>
 </div>
 
 <div id="disqus_thread"></div>
