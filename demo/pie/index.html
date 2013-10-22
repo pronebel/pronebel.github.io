@@ -29,21 +29,20 @@
              <div id="index_menu">
                  <div class="index-menu-title"></div>
                  <ul class="index_menu_items list-unstyled">
-                     <li><a href="" class="menu-checkin"><i></i><strong>签到送礼</strong><span>签到得奖，完全免费</span></a></li>
-                     <li><a href="" class="menu-digg"><i></i><strong>疯狂旷工</strong><span>挖金币，买商品</span></a></li>
-                     <li><a href="" class="menu-buy"><i></i><strong>竞拍、竞买</strong><span>商品低价，保障权益</span></a></li>
+                     <li class="J_hoverItem" data-index="1"><a href="javascript:;" class="menu-checkin"><i></i><strong>签到送礼</strong><span>签到得奖，完全免费</span></a></li>
+                     <li class="J_hoverItem"  data-index="2"><a href="javascript:;" class="menu-digg"><i></i><strong>疯狂旷工</strong><span>挖金币，买商品</span></a></li>
+                     <li class="J_hoverItem"  data-index="3"><a href="javascript:;" class="menu-buy"><i></i><strong>竞拍、竞买</strong><span>商品低价，保障权益</span></a></li>
                  </ul>
-                 <div class="down-loadlink ">
+                 <div class="down-loadlink J_hoverItem"  data-index="4">
                      <a href="javascript:;" class="ios"></a>
                  </div>
-                 <div class="down-loadlink ">
+                 <div class="down-loadlink J_hoverItem"  data-index="5">
                      <a href="javascript:;" class="apk"></a>
                  </div>
              </div>
              <div id="index_container">
                    <div id="download_card">
-                        <img id="J_iosCard" src="card/ios_card.jpg">
-                       <img id="J_apkCard" style="display: none;" src="card/apk_card.png" >
+                        <img id="J_showImg" src="card/1.jpg">
                    </div>
              </div>
          </div>
@@ -59,23 +58,55 @@
 
 <script>
     $(document).ready(function(){
-        $(".down-loadlink a").hover(function(){
+        var interPick ;
+        var i=0;
+        var interCircle = function(){
+           var hoverItems =  $("#index_menu  .J_hoverItem");
+
+            interPick = setInterval(function(){
+                if(i>=5){
+                    i=0;
+                }
+                $('.J_hoverItem').removeClass("current");
+                $(hoverItems[i]).addClass("current");
+
+                var curIndex =  $(hoverItems[i]).data("index");
+                $("#J_showImg")[0].src="card/"+curIndex+".jpg";
+                $("#J_showImg").fadeIn();
+
+                i++;
+
+
+            },2000);
+        }
+
+        interCircle();
+
+        $("#index_menu  .J_hoverItem").hover(function(){
             var curDom = $(this);
-            if(curDom.hasClass("ios")&&$("#J_iosCard").css("display")=="none"){
-                $("#J_apkCard").fadeOut(function(){
-                    $("#J_iosCard").fadeIn();
-                });
-
-            }else if(curDom.hasClass("apk")&&$("#J_apkCard").css("display")=="none"){
-                $("#J_iosCard").fadeOut(function(){
-                    $("#J_apkCard").fadeIn();
-                });
-
+            if(interPick){
+                clearInterval(interPick);
             }
-        })
+            $('.J_hoverItem').removeClass("current");
+            var curIndex = curDom.data("index");
+
+                $("#J_showImg")[0].src="card/"+curIndex+".jpg";
+                $("#J_showImg").fadeIn();
+
+
+        },function(){
+            i=0;
+            interCircle();
+        });
+
     });
 </script>
-
-
+<div style="display: none;">
+<img src="card/1.jpg">
+<img src="card/2.jpg">
+<img src="card/3.jpg">
+<img src="card/4.jpg">
+<img src="card/5.jpg">
+</div>
 </body>
 </html>

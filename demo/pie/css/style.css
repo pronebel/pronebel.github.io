@@ -32,7 +32,8 @@
     font-weight: bold;
 }
 #header_menu span.word2 { width:81px;}
-#header_menu a:hover span.word2 , #header_menu a.current span.word2 {
+#header_menu a:hover span.word2 {color:#dc5a0b;}
+#header_menu a.current span.word2 {
     background: url(img/menu_item_bg_2.png) left top no-repeat;
     width:81px;
     color:#fff;
@@ -80,7 +81,7 @@
     position: absolute;top:126px;  left:255px;
 
     width:660px; height:475px;
-    /*background:url(img/banner.png) left top no-repeat;*/
+
     z-index: 555;
 }
 .index-menu-title{
@@ -104,7 +105,7 @@
     height:65px;
     padding-left:78px;
 }
-#index_menu li a:hover {
+#index_menu li a:hover,#index_menu li.current a  {
     background: url(img/index_bg_hover.png) left top no-repeat;
 }
 
@@ -160,8 +161,8 @@
 
 #download_card {
     position: absolute;
-    left: 215px;
-    top: 170px;
+    left: 180px;
+    top: 118px;
     height:190px;width:190px;
 }
 
