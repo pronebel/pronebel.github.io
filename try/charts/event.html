@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/public/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<script src="/public/js/lib/jquery.js"></script>
+<script src="lib/highcharts/highcharts.src.js"></script>
+<script src="lib/highcharts/highcharts-more.src.js"></script>
+
+<script src="dev/gas.js"></script>
+
+<h2>Chart Demo:  gas</h2>
+
+
+
+<div id="container"></div>
+<script>
+   $(function () {
+
+
+	var data = [111, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4] ; 
+
+
+		//
+		var tplData ={
+
+	color: '#00FF00',
+	y: 150
+}
+
+
+
+
+   var chartDemo=new Highcharts.Chart({
+         
+        chart: {
+            type: 'column',
+			renderTo: 'container',
+        },
+        
+      
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        
+        plotOptions: {
+            series: {
+                states: {
+                    select: {
+                        color: 'red',
+			            borderColor: '#000000',
+			            shadow: false
+                    }
+                }
+            }
+        },
+        
+        series: [{
+            allowPointSelect : true,
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]        
+        }]
+    });
+});
+
+
+
+</script>
+</body>
+</html>
