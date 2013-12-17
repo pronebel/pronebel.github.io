@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;"
+          name="viewport"/>
+
+    <title></title>
+    <style>
+        *{
+         margin:0;padding:0;   
+        }
+        body{
+            background:#fff;
+            padding:10px 30px;/*不要空白就去掉此处*/
+        }
+        
+        #time-area{
+            height:72px;
+            background: #e4e4e6; border-radius: 10px; -webkit-border-radius: 10px;
+            padding-left:134px;
+        }
+        #time-area .left {
+            width:134px;height: 36px;padding-top:2px;padding-bottom: 34px;line-height: 36px;
+            text-align: center;color:#fff;font-size: 18px;
+            background: url(img/leftbg.png) left top;
+            margin-left:-134px;
+            float:left;
+        }
+        #time-area .time-cont{
+            position: relative;height:72px;
+        }
+        .time-item {
+            float:left;width:33.3%;height:52px;padding:10px 0;
+            background: url(img/rightborder.jpg) right center no-repeat;
+
+            text-align: center;
+            color: #ff6900;
+        }
+        .time-item p{
+            height:26px; line-height: 26px;
+        }
+        #time-area .last {background: none;}
+        
+
+
+    </style>
+</head>
+<body>
+
+<div id="time-area">
+    <div class="left">
+        竞拍时限
+    </div>
+    <div class="time-cont">
+        <div class="time-item">
+            <p id="J_hour">-</p>
+            <p>小时</p>
+        </div>
+        <div class="time-item">
+            <p id="J_minute">-</p>
+            <p>分钟</p>
+        </div>
+        <div class="time-item  last">
+            <p id="J_second">-</p>
+            <p>秒数</p>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    var serverTime = 15;//服务器输出时间，单位为秒；
+
+    var calTime = function(){
+        var hours = parseInt(serverTime/60/60,10);
+        var minutes = parseInt((serverTime-hours*60*60)/60,10);
+        var seconds = parseInt((serverTime-hours*60*60-minutes*60),10);
+
+        $("#J_hour").html(hours);
+        $("#J_minute").html(minutes);
+        $("#J_second").html(seconds);
+
+
+        if(serverTime==0){
+            clearInterval(timeId);
+        }else{
+            serverTime--;
+        }
+    }
+
+    var timeId = setInterval(function(){
+        calTime();
+
+    },1000)
+
+
+
+</script>
+
+
+</body>
+</html>
