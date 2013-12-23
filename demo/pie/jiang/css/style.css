@@ -1,0 +1,168 @@
+
+body,html{
+    background:#f4f4f4;
+    max-width:640px;margin:0 auto;
+
+}
+
+#header {
+    height:72px;
+
+    padding-top:14px;padding-bottom: 13px;
+    padding-left:20px;
+    background:#FFFFFF;
+}
+
+
+#logo{
+    display: block;width:332px;height:72px;
+    float: left;
+    background: url(img/logo.png) left center no-repeat;
+
+}
+
+
+#menu{
+    padding-top:16px;padding-bottom: 16px;
+    height:40px;
+    line-height: 40px;
+    float: right;
+}
+
+#menu a {
+    height:40px;
+    color:#838383;font-size:20px; text-decoration: none;
+    display: inline-block; margin-right: 10px;
+    padding:0 8px;
+}
+#menu a.selected{
+    color:#fff;
+    background: #838383;
+    border-radius: 8px; -moz-border-radius: 8px;
+}
+
+
+#footer {
+    height:85px;     background: url(img/line.jpg) left top repeat-x;
+    text-align:center;line-height: 20px; padding:23px 0 23px;
+    color:#b7b7b7;
+}
+
+#wrapper {
+    background: #f4f4f4;
+}
+
+
+#jiang-list {
+
+}
+
+#jiang-list .Item{
+    padding-left:270px;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-right:15px;
+
+    background: url(img/line.jpg) left top repeat-x;
+}
+
+#jiang-list    .Img-inner {
+
+    width:230px;height:230px;float:left;margin-left:-270px;
+    padding:15px;
+    background: url(img/img_bg.jpg) left top no-repeat;
+
+
+}
+#jiang-list .Img {
+   width:230px;height:230px;overflow: hidden;
+}
+#jiang-list .Img img{
+    width: 230px;
+}
+
+#jiang-list .DateTime {float:right;}
+
+#jiang-list .Intro{
+    color:#6d6d6d;
+    font-size:16px;line-height:32px;
+}
+#jiang-list .Intro .Title {
+       color:#ff6000;
+    margin-bottom: 30px;
+}
+#jiang-list .Intro .desc {
+    margin-bottom: 30px;
+}
+
+
+#about {
+    background: url(img/line.jpg) left top repeat-x;
+    padding:40px 0 40px 50px;
+
+    font-size:20px; line-height:48px;color:#515151;
+}
+
+
+
+#index {
+    width:640px;
+}
+.index-banner {
+    margin:0 auto;
+}
+.download-link {
+   margin:50px auto;
+}
+
+.index-banner {
+
+}
+
+.index-intro  {
+
+    padding:0 20px;
+    margin:0 auto;
+
+}
+.index-intro .Title {
+
+    margin:0 auto 42px;
+    height:27px;
+    background: url(img/line.jpg) left center repeat-x;
+    text-align: center;
+}
+
+
+
+.index-intro li {
+   margin-bottom: 52px;
+}
+
+.index-intro .tags {
+    padding-top:7px;
+}
+.index-intro .tags a{
+    display: inline-block;
+    height:46px; line-height: 46px;font-size: 24px;color:#8f8f8f; border:1px solid #dddddd; padding:0 12px;
+    border-radius: 8px;-webkit-border-radius: 8px; text-decoration: none;margin-right:8px;margin-bottom: 8px;
+}
+
+
+
+@media (max-width: 600px) {
+    #logo{
+        width:200px;
+        background-size: 100%;
+    }
+    #index{
+        width:480px;
+    }
+    #index img {
+        max-width:480px;
+    }
+    #index .index-intro img{
+        max-width:450px;
+    }
+
+}
