@@ -5,6 +5,7 @@ body,html{
 
 }
 
+
 #header {
     height:72px;
 
@@ -37,7 +38,7 @@ body,html{
 }
 #menu a.selected{
     color:#fff;
-    background: #838383;
+    background: #afafaf;
     border-radius: 8px; -moz-border-radius: 8px;
 }
 
@@ -85,7 +86,7 @@ body,html{
 
 #jiang-list .Intro{
     color:#6d6d6d;
-    font-size:16px;line-height:32px;
+    font-size:20px;line-height:32px;
 }
 #jiang-list .Intro .Title {
        color:#ff6000;
@@ -99,6 +100,7 @@ body,html{
 #about {
     background: url(img/line.jpg) left top repeat-x;
     padding:40px 0 40px 50px;
+    min-height:600px;
 
     font-size:20px; line-height:48px;color:#515151;
 }
@@ -146,10 +148,12 @@ body,html{
     display: inline-block;
     height:46px; line-height: 46px;font-size: 24px;color:#8f8f8f; border:1px solid #dddddd; padding:0 12px;
     border-radius: 8px;-webkit-border-radius: 8px; text-decoration: none;margin-right:8px;margin-bottom: 8px;
+    background: #fff;
 }
 
 
 
+/*
 @media (max-width: 600px) {
     #logo{
         width:200px;
@@ -165,4 +169,4 @@ body,html{
         max-width:450px;
     }
 
-}
+}*/
