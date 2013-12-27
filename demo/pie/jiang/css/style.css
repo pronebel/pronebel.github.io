@@ -162,33 +162,3 @@ body,html{
     border-radius: 8px;-webkit-border-radius: 8px; text-decoration: none;margin-right:8px;margin-bottom: 8px;
     background: #fff;
 }
-
-@media (max-width:640px) {
-
-    #logo {
-        float: none;
-        display: block;
-        width:100%;
-        max-width:100%;
-    }
-    #logo img {
-       width:100%;      height:auto;
-    }
-}
-
-
-@media (max-width:320px) {
-
-
-    #jiang-list    .Img-inner {
-
-        width:85%;float:left;
-        max-width: 85%;
-
-        min-width:85%;
-
-
-    }
-
-
-}
