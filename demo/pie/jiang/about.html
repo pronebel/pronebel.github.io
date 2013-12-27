@@ -2,18 +2,8 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <script>
-        var scale = 1.0, ratio = 1;
-        (function() {
-
-            if (window.devicePixelRatio >1  ) {
-                scale = 0.5;
-                ratio = 1;
-            }
-            var text = '<meta name="viewport" content="initial-scale=' + scale + ', maximum-scale=' + scale +', minimum-scale=' + scale + ', user-scalable=no" />';
-            document.write(text);
-        })();
-    </script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0;"
+          name="viewport"/>
 
     <title></title>
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -22,7 +12,7 @@
 </head>
 <body>
     <div id="header">
-        <a id="logo" href="index.html"></a>
+        <a id="logo" href="index.html"><img src="css/img/logo.png"></a>
         <div id="menu">
 
 
