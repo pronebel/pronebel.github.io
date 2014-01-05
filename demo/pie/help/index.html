@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;"
+          name="viewport"/>
+    <link href="css/style.css" rel="stylesheet">
+    <title></title>
+
+</head>
+<body>
+
+
+<ul id="main-nav">
+    <li>
+       <div class="bg">
+           <a href="detail.html"  class="bg-mid "  data-sort-id="1">
+               <img>
+               常见问题
+           </a>
+       </div>
+    </li>
+    <li>
+       <div class="bg">
+        <a href="#"  class="bg-mid "  data-sort-id="2">
+            <img>
+            公平、公正、安全
+        </a>
+       </div>
+    </li>
+    <li>
+        <div class="bg">
+            <a href="#"  class="bg-mid"  data-sort-id="3">
+                <img>
+                集合竞卖
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="bg">
+            <a href="#"  class="bg-mid "  data-sort-id="4">
+                <img >
+                低价竞卖
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="bg">
+             <a href="#"  class="bg-mid "  data-sort-id="5">
+                <img >
+                签到送礼
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="bg">
+            <a href="#"  class="bg-mid "  data-sort-id="6">
+                <img>
+                疯狂挖矿
+            </a>
+        </div>
+    </li>
+    <li>
+        <div class="bg">
+            <a href="#"  class="bg-mid "  data-sort-id="7">
+                <img>
+                商品、售后、物流
+            </a>
+        </div>
+    </li>
+
+</ul>
+<script src="js/jquery.js"></script>
+<script src="js/sort.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $("#main-nav li a").each(function(){
+            var sortId = $(this).data("sort-id");
+            var sortData = sortStyle[sortId];
+            $(this).addClass(sortData.className);
+            $(this).find("img")[0].src = "css/img/"+sortData.img;
+        });
+
+
+    });
+</script>
+</body>
+</html>

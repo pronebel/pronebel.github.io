@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;"
+          name="viewport"/>
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <title></title>
+
+</head>
+<body>
+
+<div id="qa-list" data-sort-id="2">
+    <div class="Title ">
+
+        <a href="index.html" class="back">上一页</a>
+        <img src="">
+        常见问题
+    </div>
+<ul>
+    <li>
+        <a href="#">常见问题</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+    <li>
+        <a href="#">公平、公正、安全</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+    <li>
+        <a href="#">集合竞卖</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+    <li>
+        <a href="#">低价竞卖</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+    <li>
+        <a href="#">签到送礼</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+    <li>
+        <a href="#">疯狂挖矿</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+    <li>
+        <a href="#">商品、售后、物流</a>
+        <div class="Cont">
+            如果参与人数不够，竞买结束后，参与集合竞买的金币会返还到用户的账户。如果竞买人数足够，计算出了幸运用户，金币是不返还的。
+        </div>
+    </li>
+</ul>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/sort.js"></script>
+<script>
+      $(document).ready(function(){
+
+
+         var sortId = $("#qa-list").data("sort-id");
+         var sortData = sortStyle[sortId];
+          $("#qa-list").find(".Title").addClass(sortData.className);
+          $("#qa-list .Title img")[0].src = "css/img/"+sortData.img;
+
+
+
+
+         $("#qa-list li").click(function(){
+
+            if($(this).hasClass("selected")){
+
+            }else{
+                $("#qa-list li").removeClass("selected");
+                $("#qa-list li span").remove();
+                $(this).addClass("selected");
+                $(this).prepend('<span>@</span>');
+            }
+         });
+      });
+</script>
+</body>
+</html>
