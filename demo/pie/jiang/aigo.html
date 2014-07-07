@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <title></title>
+
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        body{
+            background:#fff;
+        }
+        a {text-decoration: none;}
+        a  img {display: block;}
+        #header{
+            height:280px;
+            border-top:30px solid #1f79b5;
+            border-bottom:30px solid #1f79b5;
+            padding-right:20px;
+        }
+
+
+        #logo{  float: left;;}
+
+
+        #righter{position: relative;
+            height:280px;
+        }
+
+        #menu {
+            position: absolute;right:0;bottom: 0;
+        }
+        #menu a {float: right;}
+
+
+        #banner{
+            position: absolute;right:0;
+        }
+
+        #topbg {position: absolute;top:0;right:0;}
+
+
+
+        /*正常情况*/
+        #header {padding-left:320px;}
+        #logo{
+            padding-top:10px;
+            padding-bottom:4px;margin-left:-300px
+        }
+
+        #menu {  width:640px;}
+        #banner{top:40px;}
+
+
+        /*640px<=800px*/
+        @media screen and (max-width: 800px) {
+
+            #logo img{width:220px;height:auto;padding-top: 40px; }
+
+            #menu img{    width:90px;height:auto;  }
+            #topbg img {width:450px;}
+            #banner{top: 72px;}
+            #banner img{width:450px;height:auto;  }
+
+        }
+
+        /*480px<=640px*/
+        @media screen and (max-width: 640px) {
+
+            #logo{margin-left: -310px;}
+            #logo img{width:176px;height:auto;padding-top: 65px; }
+
+            #menu img{    width:81px;height:auto;  }
+            #topbg img {width:405px;}
+            #banner{top: 72px;}
+            #banner img{width:405px;height:auto;  }
+
+        }
+        /*480px*/
+        @media screen and (max-width: 480px) {
+            #header {padding:0 35px;}
+            #logo {display: none;}
+            #logo img{width:176px;height:auto;padding-top: 40px; }
+
+            #menu img{    width:81px;height:auto;  }
+            #topbg img {width:405px;}
+            #banner{top: 72px;}
+            #banner img{width:405px;height:auto;  }
+
+        }
+
+        /*=320px*/
+        @media screen and (max-width: 320px) {
+            #header {padding:0 50px;}
+            #logo {display: none;}
+            #logo img{width:176px;height:auto;padding-top: 40px; }
+
+            #menu img{    width:42px;height:auto;  }
+            #topbg img {width:220px;}
+            #banner{top: 72px;}
+            #banner img{width:210px;height:auto;  }
+
+        }
+    </style>
+
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img src="img/logo.png">
+    </div>
+    <div id="righter">
+
+        <div id="banner">
+            <img src="img/banner.png">
+        </div>
+        <div id="topbg"><img src="img/top_bg.png"></div>
+        <div id="menu">
+
+
+            <a href="#">
+                <img src="img/yundong.jpg">
+            </a>
+            <a href="#">
+                <img src="img/youyong.jpg">
+            </a>
+            <a href="#">
+                <img src="img/meirong.jpg">
+            </a>
+            <a href="#">
+                <img src="img/rituo.jpg">
+            </a>
+            <a href="#">
+                <img src="img/jiyang.jpg">
+            </a>
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
