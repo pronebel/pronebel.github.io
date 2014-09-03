@@ -1,5 +1,9 @@
 
 
+#关键字
+
+- $timeout
+- $scope
 
 
 
