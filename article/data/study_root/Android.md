@@ -35,3 +35,42 @@
 	mGestureDetector = new GestureDetector(this, this);
 	// 注意前一个this代表的是一个Context,后一个this代表的是一个OnGestureListener。
 	// Activity继承自Context, 而你的activity应该实现了(implements)OnGestureListener接口。
+
+
+
+#### 资料&资源
+
+- http://qualcomm.csdn.net/module/zone/qualcomm/ziyuan
+- http://androidannotations.org/
+
+
+##定位
+
+html5方法
+
+
+	  navigator.geolocation.getCurrentPosition(function (position) {
+
+            }, function (err) {
+
+                //错误处理
+                switch (err.code) {
+                    case 1:
+                        console.log("位置服务器被拒绝。");
+                        break;
+                    case 2:
+                        console.log("暂时获取不到位置信息。");
+                        break;
+                    case 3:
+                        console.log("获取信息超时。");
+                        break;
+                    default:
+                        console.log("未知错误。");
+                        break;
+                }
+            }, {
+                maximumAge: 10000, timeout: 15000,
+                enableHighAccuracy: true
+            });
+
+- [phonegap利用百度地图sdk定位](http://snoopyxdy.blog.163.com/blog/static/601174402014420872345/)

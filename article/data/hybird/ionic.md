@@ -10,13 +10,21 @@
 - [Ant](http://ant.apache.org/)
 - [Crosswalk](https://crosswalk-project.org/#documentation/cordova/develop_an_application)
 
+------------------------------------------------------
+
+
+-------------------------------------------------------------
 ### 资料
 - https://github.com/i5ting/ionic_ninja
 - [Cordova 3.x 基础（1） -- 环境搭建（Windows / Android）](http://rensanning.iteye.com/blog/2016364)
 - [使用Ionic构建Hybrid App](http://my.oschina.net/nosand/blog/294011)
 - [十分钟使用ionic Framework开发一个跨平台移动应用](http://blog.csdn.net/offbye/article/details/38223769)
 - http://www.changeself.net/archives/ionic.html
+- [Cordova 3.x 基础（7） -- Native API的使用](http://rensanning.iteye.com/blog/2021619)
 
+
+
+---------------------------------------------------------------
 ### Demo
 
 - [swipe-cards](http://ionicframework.com/demos/swipe-cards/) [中文](http://blog.csdn.net/jasondu264/article/details/19164897)
@@ -61,13 +69,13 @@
 - https://github.com/robkorv/ionicjs-localforage
 - https://github.com/CesarLanderos/KLSMusicPlayer
 
-
+-------------------------------------------------------------------------------------------------
 #### 国内的Github用户
 - https://github.com/baofen14787/ionic-demo-example
 - https://github.com/i5ting/ionic_ninja
 - https://github.com/cfansimon/cordova-ionic-app
 
-
+-----------------------------------------------------------------------------------------------------
 ###  quick tips:
 
  * cd into your project: $ cd [project-path]
@@ -152,7 +160,7 @@ https://github.com/phpcxy/PhoneGap-BaiduLocPlugin
 http://snoopyxdy.blog.163.com/blog/static/601174402014420872345/
 
 
-
+----------------------------------------------------------------
 ## cordova 真机部署相关
 
 - https://github.com/rrojas-chariot/phonegap3-tutorial-angularjs/tree/master/plugins
