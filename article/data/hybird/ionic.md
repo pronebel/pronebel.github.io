@@ -1,6 +1,6 @@
 
 ## ionic Framwork Hybird APP 
-
+http://28code.com/docs/api/directive/ionNavView/
 ### 框架介绍
 
 - ionic ([Doc](http://ionicframework.com/getting-started/) ,[Github](https://github.com/driftyco/ionic))
@@ -164,3 +164,15 @@ http://snoopyxdy.blog.163.com/blog/static/601174402014420872345/
 ## cordova 真机部署相关
 
 - https://github.com/rrojas-chariot/phonegap3-tutorial-angularjs/tree/master/plugins
+
+
+
+### icon字体
+
+	http://www.poluoluo.com/jzxy/201206/167011.html
+	字体编辑器：fontographer
+
+
+https://play.google.com/store/apps/details?id=com.ionic.viewapp
+
+https://github.com/ionic-in-action/ionic-demo-resort-app
