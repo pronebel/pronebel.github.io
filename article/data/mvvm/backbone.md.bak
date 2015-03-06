@@ -26,13 +26,3 @@
 
 
 - http://pelebyte.net/blog/2013/08/12/angularjs-from-the-perspective-of-a-backbone-convert/
-
-
-####  Backbone-Model 缓存策略
-
-- 通过参数比对 postParam == prePost ,且缓存存在，则拿缓存，否则直接ajax去取
-- 拿缓存之后，可以根据需求，立刻去拿数据，判断是否要更新，有更新则update缓存，二次更新ui
-- 缓存机制： 指定过期时间，指定倒计时结束更新，读取计数，
-- 
-
-model的缓存，是在存在自身还是在全局缓存？
