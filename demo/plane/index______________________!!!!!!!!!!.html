@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8008/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>登陆</title>
+
+
+</head>
+<body>
+<style>
+    @charset "utf-8";
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    body {
+        font-size: 12px;
+        font-family: "微软雅黑";
+        color: #333;
+        line-height: 160%;
+        background: #000;/*url(images/login/login-bg.jpg) center top repeat-x #FFF;*/
+        height: 100%;
+    }
+
+    p, ul, .name, .pwd, dd, h1, h2, h3, form, input, select, textarea {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: "微软雅黑";
+        line-height: 150%;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    div, p {
+        word-wrap: break-word;
+    }
+
+    img {
+        border: none;
+    }
+
+    .login .air{position:absolute;top:-100px;left:-100px;z-index:50;}
+    .login .air.balloon{width:24px;height:31px;background:url(images/balloon.png) no-repeat;}
+    .login .air.plane{width:16px;height:64px;background:url(images/plane16-64.png) no-repeat;}
+
+    /*login*/
+    .login {
+        padding: 1px 0 0 0;
+        /*background: url(images/login/login-bg.jpg) center top no-repeat #FFF;*/
+        padding: 150px 0 0 0;
+    }
+
+
+
+
+    .login .box {
+        position: relative;
+        z-index: 100;
+        margin: 0 auto;
+        width: 700px;
+        height: 320px;
+        background: url(images/login/login.png) center top no-repeat;
+    }
+
+
+</style>
+
+
+<div class="login">
+
+    <div class="ai2r balloon" ></div>
+    <div class="ai2r balloon" ></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div> <div class="air plane"></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div> <div class="air plane"></div>
+
+</div>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+
+    function rand(mi, ma) {
+        var range = ma - mi;
+        var out = mi + Math.round(Math.random() * range);
+        return parseInt(out);
+    }
+    ;
+
+    function getViewSize() {
+        var de = document.documentElement;
+        var db = document.body;
+        var viewW = de.clientWidth == 0 ? db.clientWidth : de.clientWidth;
+        var viewH = de.clientHeight == 0 ? db.clientHeight : de.clientHeight;
+        return Array(viewW, viewH);
+    }
+
+
+    $(function () {
+        airBalloon('div.air');
+    });
+
+    /*
+     @function 热气球移动
+     @update by julying , 2012/7/25
+     */
+    function airBalloon(balloon) {
+        var viewSize = [], viewWidth = 0, viewHeight = 0;
+        resize();
+        $(balloon).each(function () {
+            $(this).css({top: rand(40, viewHeight * 0.5), left: rand(10, viewWidth - $(this).width())});
+            fly(this);
+        });
+        $(window).resize(function () {
+            resize()
+            $(balloon).each(function () {
+                $(this).stop().animate({
+                    top: rand(40, viewHeight * 0.5),
+                    left: rand(10, viewWidth - $(this).width())
+                }, 1000, function () {
+                    fly(this);
+                });
+            });
+        });
+        function resize() {
+            viewSize = getViewSize();
+            viewWidth = $(document).width();
+            viewHeight = viewSize[1];
+        }
+
+        function fly(obj) {
+            var $obj = $(obj);
+            var currentTop = parseInt($obj.css('top'));
+            var currentLeft = parseInt($obj.css('left'));
+            var targetLeft = rand(10, viewWidth - $obj.width());
+            var targetTop = rand(40, viewHeight / 2);
+            console.log(currentLeft+","+currentTop);
+            console.log(targetLeft+","+targetTop);
+            /*求两点之间的距离*/
+            var removing = Math.sqrt(Math.pow(targetLeft - currentLeft, 2) + Math.pow(targetTop - currentTop, 2));
+
+            var L = (targetLeft-currentLeft);
+            var T = (targetTop-currentTop);
+
+
+            var tagVal = parseFloat(Math.atan(Math.abs(L/T)));
+
+
+            console.log(tagVal);
+            var angel = parseInt((tagVal/Math.PI)*180);
+
+            if(T==0){
+                if(L>0){
+                    angel =90;
+                }else {
+                    angel=-90;
+                }
+            }
+            else if(L==0){
+                if(T>0){
+                    angel =180;
+                }else {
+                    angel=0;
+                }
+            }
+            else if(L>0&&T>0){
+                angel= 180-angel;
+            }else if(L>0&&T<0){
+                angel= angel;
+            }else if(L<0&&T>0){
+                angel= angel-180;
+            }else if(L<0&&T<0){
+                angel = 0-angel;
+            }
+
+
+            console.log(angel);
+            $obj.css("transform",'rotate('+angel+'deg)');
+            console.log("L"+removing);
+
+
+
+            /*每秒移动24px ，计算所需要的时间，从而保持 气球的速度恒定*/
+            var moveTime = removing / 36;
+            $obj.animate({top: targetTop, left: targetLeft}, moveTime * 1000, function () {
+                setTimeout(function () {
+                    fly(obj);
+                }, rand(1000, 3000));
+            });
+        }
+    }
+    ;
+</script>
+
+
+</body>
+</html>

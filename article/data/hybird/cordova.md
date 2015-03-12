@@ -2,7 +2,14 @@
 
 - [Cordova](http://cordova.apache.org/docs/en/3.3.0/index.html)
 - [Ant](http://ant.apache.org/)
-- 
+
+
+####
+
+- http://plugins.cordova.io/#/search?search=sound
+- ngcordova.com
+
+
 ######### Camera API：
 	
 	1、页面引用cordova.js

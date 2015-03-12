@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8008/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>登陆</title>
+
+
+</head>
+<body>
+<style>
+    @charset "utf-8";
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    body {
+        font-size: 12px;
+        font-family: "微软雅黑";
+        color: #333;
+        line-height: 160%;
+        background: #000;/*url(images/login/login-bg.jpg) center top repeat-x #FFF;*/
+        height: 100%;
+    }
+
+    p, ul, .name, .pwd, dd, h1, h2, h3, form, input, select, textarea {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: "微软雅黑";
+        line-height: 150%;
+    }
+
+    ul, li {
+        list-style: none;
+    }
+
+    div, p {
+        word-wrap: break-word;
+    }
+
+    img {
+        border: none;
+    }
+
+    .login .air{position:absolute;top:-100px;left:-100px;z-index:50;}
+    .login .air.balloon{width:24px;height:31px;background:url(images/balloon.png) no-repeat;}
+    .login .air.plane{width:16px;height:64px;background:url(images/plane16-64.png) no-repeat;}
+
+    /*login*/
+    .login {
+        padding: 1px 0 0 0;
+        /*background: url(images/login/login-bg.jpg) center top no-repeat #FFF;*/
+        padding: 150px 0 0 0;
+    }
+
+
+
+
+    .login .box {
+        position: relative;
+        z-index: 100;
+        margin: 0 auto;
+        width: 700px;
+        height: 320px;
+        background: url(images/login/login.png) center top no-repeat;
+    }
+
+
+</style>
+
+
+<div class="login">
+
+    <div class="ai2r balloon" ></div>
+    <div class="ai2r balloon" ></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div> <div class="air plane"></div>
+    <div class="air plane"></div>
+    <div class="air plane"></div> <div class="air plane"></div>
+
+</div>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+
+function rand(b,d){var a=d-b;var c=b+Math.round(Math.random()*a);return parseInt(c);}function getViewSize(){var d=document.documentElement;var b=document.body;var c=d.clientWidth==0?b.clientWidth:d.clientWidth;var a=d.clientHeight==0?b.clientHeight:d.clientHeight;return Array(c,a);}$(function(){airBalloon("div.air");});function airBalloon(e){var f=[],d=0,a=0;b();$(e).each(function(){$(this).css({top:rand(40,a*0.5),left:rand(10,d-$(this).width())});c(this);});$(window).resize(function(){b();$(e).each(function(){$(this).stop().animate({top:rand(40,a*0.5),left:rand(10,d-$(this).width())},1000,function(){c(this);});});});function b(){f=getViewSize();d=$(document).width();a=f[1];}function c(l){var g=$(l);var p=parseInt(g.css("top"));var h=parseInt(g.css("left"));var o=rand(10,d-g.width());var r=rand(40,a/2);console.log(h+","+p);console.log(o+","+r);var j=Math.sqrt(Math.pow(o-h,2)+Math.pow(r-p,2));var q=(o-h);var i=(r-p);var m=parseFloat(Math.atan(Math.abs(q/i)));console.log(m);var k=parseInt((m/Math.PI)*180);if(i==0){if(q>0){k=90;}else{k=-90;}}else{if(q==0){if(i>0){k=180;}else{k=0;}}else{if(q>0&&i>0){k=180-k;}else{if(q>0&&i<0){k=k;}else{if(q<0&&i>0){k=k-180;}else{if(q<0&&i<0){k=0-k;}}}}}}console.log(k);g.css("transform","rotate("+k+"deg)");console.log("L"+j);var n=j/36;g.animate({top:r,left:o},n*1000,function(){setTimeout(function(){c(l);},rand(1000,3000));});}}
+</script>
+
+
+</body>
+</html>
