@@ -11,7 +11,7 @@
 
 
 
-####扫描 article目录生成 menu-data 和 文件索引列表
+####扫描 article目录生成 menu-data 和 文件索引列表:
 
 	文件索引列表
 
