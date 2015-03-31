@@ -183,7 +183,13 @@
 
 
             console.log(angel);
+
             $obj.css("transform",'rotate('+angel+'deg)');
+			 $obj.css("-webkit-transform",'rotate('+angel+'deg)');
+			  $obj.css("-moz-transform",'rotate('+angel+'deg)');
+			   $obj.css("-ms-transform",'rotate('+angel+'deg)');
+			    $obj.css("-o-transform",'rotate('+angel+'deg)');
+				
             console.log("L"+removing);
 
 

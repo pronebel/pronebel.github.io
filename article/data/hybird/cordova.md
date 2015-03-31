@@ -115,3 +115,16 @@ LINK:
 	cordova platform update android 
 	cordova platform update ios 
 	...etc.
+
+
+
+
+
+####  Android中cordova插件添加后，影响到的文件
+
+- res/xml/config.xml : feature
+- src/：增加了插件的java文件
+- asserts/www/plugins/: 
+	- 增加了 插件的js文件
+- asserts/www/cordova_plugins.js: 增减了 对应的file对象信息
+- 
