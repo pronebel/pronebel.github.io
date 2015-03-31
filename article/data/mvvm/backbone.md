@@ -6,6 +6,7 @@
 - [Backbone.stickit](https://github.com/NYTimes/backbone.stickit)
 - [knockback](http://kmalakoff.github.io/knockback/)
 - [Backbone-relational](https://github.com/PaulUithol/Backbone-relational)
+- Backbone.ModelBinder
 
 
 #### 资料

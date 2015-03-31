@@ -1,0 +1,296 @@
+@charset "utf-8";
+/**
+* ui-box
+ * @name  ui-box
+ * @example
+
+ <div class="ui-box">
+    <div class="-title"></div>
+    <div class="-cont">
+
+    </div>
+
+ </div>
+
+
+ */
+
+
+.ui-box {
+
+
+  background: #fff;
+
+  *position: relative;
+  *z-index: 1;
+
+}
+.ui-box-title {
+  min-height: 36px;
+
+
+
+  position: relative;
+
+  strong {
+
+    display: inline-block;
+
+    margin-right: 5px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+}
+.ui-box-option {
+  position: absolute;right:0;bottom:0;
+  text-align: right;
+
+  color:#987c62;
+}
+
+.ui-box-container {
+  zoom:1;
+
+
+  h4{
+    font-size: 14px;color: #6E6E6E;
+    font-weight: 700;margin-bottom: 10px;
+  }
+
+
+  .Tool {
+    background: #fafafa;
+    padding: 5px 8px;
+
+    .avg-line-checkbox {
+      color:#e21515;
+    }
+
+  }
+
+}
+
+.ui-box-container-pd20{
+  padding:20px;
+}
+
+
+.ui-box-noborder {
+  border:none;
+
+  .ui-box-title {border:none;}
+}
+
+.ui-box-notitle {
+  .ui-box-container{
+    padding:20px;
+    background: #fafafa;
+  }
+}
+
+
+
+.ui-box-column {
+  .ui-box {
+    width:49%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+/*
+
+<div class="ui-box">
+  <div class="ui-box-title"><strong>用户数量</strong></div>
+  <div class="ui-box-container">
+      <div class="ui-column ui-column-x4 clearfix">
+          <div class="ui-column-item">
+
+          </div>
+          <div class="ui-column-item last">
+
+          </div>
+      </div>
+  </div>
+</div>
+
+*/
+
+
+.bg-gradient {
+  background-color: #FBFBFB;
+  background: -webkit-linear-gradient(bottom, #f7f7f7, #fff);
+  background: -moz-linear-gradient(bottom, #f7f7f7, #fff);
+  background: -o-linear-gradient(bottom, #f7f7f7, #fff);
+  background: -ms-linear-gradient(bottom, #f7f7f7, #fff);
+  background: linear-gradient(to top, #f7f7f7, #fff);
+}
+
+
+.ui-column-item {
+  float: left;display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+
+  background: #FFF;
+  padding: 15px;
+
+
+  min-height: 134px;
+  line-height: 20px;
+  overflow: hidden;
+  h3 {margin-bottom:15px;}
+  border-right: solid 1px #EBEBEB;
+}
+
+.ui-column {
+
+   display: table;width:100%;
+
+  .grid1-1{width:100%;  float: left;}
+
+  .grid2-1{width:50%;  float: left;}
+
+  .grid3-1{width:33.3%;  float: left;}
+  .grid3-2{width:66.6%;  float: left;}
+
+
+
+  .grid4-1{width:25%;  float: left;}
+  .grid4-2{width:50%;  float: left;}
+  .grid4-3{width:75%;  float: left;}
+
+  .last {
+
+    border-right: none !important;
+  }
+
+
+}
+
+.ui-column-x1 {
+  .ui-column-item {
+    width: 100%;
+
+  }
+
+
+}
+
+
+.ui-column-x2 {
+  .ui-column-item {
+    width: 50%;
+
+  }
+
+
+
+}
+
+.ui-column-x3 {
+  .ui-column-item {
+    width: 33.3%;
+
+  }
+
+}
+
+.ui-column-x4 {
+  .ui-column-item{
+    width: 25%;
+
+  }
+
+
+}
+
+.ui-column-noborder {
+  div.ui-column-item {
+    border:none ;
+  }
+}
+.ui-column-border-btm {
+  border-bottom: 1px solid #EBEBEB;
+  div.ui-column-item {
+    border-top:none;
+    border-left:none;
+    border-right:none;
+
+  }
+}
+
+
+.event-overview-column {
+  border-color: #acd1e6;
+
+  .ui-box-title{
+    border-top-color: #c8e6f6;
+    background: #c8e6f6;text-align: center;
+    strong{
+      float: none;
+    display: inline;
+      font-weight: bold;
+      color:#666;
+    }
+  }
+  .ui-column-item{
+    background: #ebf7ff;
+    border-right-color: #bbe3f9;
+    height:117px;
+    min-height: inherit;
+  }
+
+
+}
+
+
+
+.ui-section {
+
+
+  .ui-header{
+    margin-bottom: 10px;
+    padding: 20px 20px 0;
+    text-align: left;
+    font-size: 14px;
+
+  }
+}
+
+.ui-column   .ui-header {
+  padding:0 10px 0;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+
+.ui-nocontent {
+  text-align: center;
+  padding:10px;
+}
+
+
+/**
+ui-tab
+*/
+
+
+.ui-box-container {
+
+  .no_conent {
+    background: none;
+    border:none;
+  }
+  .pagination {
+    margin-right:10px;
+    margin-top:10px;
+  }
+}
+
