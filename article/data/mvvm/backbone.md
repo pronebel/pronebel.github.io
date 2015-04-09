@@ -1,7 +1,7 @@
 
 
 ------------------------------------------------
-### Backbone的MVVM扩展
+### Backbone的MVVM扩展  (初步选定  backbone.stickit 作为backbone的扩展  @2015.04.17)
 
 - [Backbone.stickit](https://github.com/NYTimes/backbone.stickit)
 - [knockback](http://kmalakoff.github.io/knockback/)

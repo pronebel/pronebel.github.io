@@ -1,0 +1,1 @@
+有部分更改在:lib/weibo.js
