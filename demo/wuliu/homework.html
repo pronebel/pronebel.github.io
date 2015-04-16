@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <style>
+        .time-daoda{color:red;}
+    </style>
+    <script src="jquery.js"></script>
+    <script src="underscore.js"></script>
+    <script src="wuliu.js"></script>
+</head>
+<body>
+<div class="container bs-docs-container">
+
+
+
+
+    <div class="row">
+        <h2>配送路线</h2>
+        <div id="J_out">
+
+        </div>
+    </div>
+</div>
+<script>
+
+    var distancePrecent = 1+ 0.20;
+
+    var perWeight = 4000;
+
+    var getSiteUnit = function(_tag){
+        var __sites = getSites();
+        var curSite =  _.find(__sites,function(tmpSite){
+            return tmpSite.name ==_tag;
+        })
+
+        return curSite;
+        console.log(curSite);
+    }
+    var getSiteByTags = function(tags){
+
+        var _arr = [];
+        for(var i=0;i<tags.length;i++){
+            var curTag =  tags[i];
+
+            _arr.push(getSiteUnit(curTag));
+        }
+
+        return _arr;
+    }
+
+    function getByLined(){
+
+
+
+
+
+
+        var lines = [];
+     /*
+        书上的路线
+        lines.push(getSiteByTags( ["A","B"]));
+        lines.push(getSiteByTags(["G","H","J","I"]));
+        lines.push(getSiteByTags(["K","L","M"]));
+        lines.push(getSiteByTags(["N","O","D","E"]));
+        lines.push(getSiteByTags( ["C","F"]));*/
+
+
+//标准值
+        lines.push(getSiteByTags( ["B","A"]));
+        lines.push(getSiteByTags(["G","H","J","I"]));
+        lines.push(getSiteByTags(["K","L","M"]));
+        lines.push(getSiteByTags(["F","O","N"]));
+        lines.push(getSiteByTags( ["C","D","E"]));
+
+
+    /*    lines.push(getSiteByTags( ["A","B"]));
+        lines.push(getSiteByTags(["G","H","J","I"]));
+        lines.push(getSiteByTags(["K","L","M"]));
+        lines.push(getSiteByTags(["N","O","F"]));
+        lines.push(getSiteByTags( ["E","D","C"]));*/
+
+        return {
+            groups:lines
+        }
+
+    }
+
+
+
+    /**
+     * 进行分组操作
+     * @returns {{groups: Array, weight: Array}}
+     */
+    function assign (){
+        var scanArray =   getSites();;
+
+        console.log(scanArray);
+
+        //选定以A为起点进行扫描
+        var startSiteIndex = getSiteIndex(scanArray,"A");
+
+        var groups =[];
+        var groupWeight = [];
+
+        //  开始扫描，并计算 载重量
+
+        var needGo = true;
+        var groupIndex = 0;
+        var curWeight = 0;
+        while(needGo){
+            var curSite  = scanArray[startSiteIndex];
+            var tmpWeight = curWeight +  curSite.need;
+
+            if(!curSite.isScan){
+                if(tmpWeight>perWeight){
+                    //大于一辆车的载重，停止，准备一下组的分配
+                    groupIndex++;//开始新一组分配
+
+                    curWeight=0;//累计量初始化为0
+
+                }else{
+                    curSite.isScan = true;
+                    curWeight = tmpWeight;//累加运载量
+
+                    if(!groups[groupIndex]){
+                        groups[groupIndex] = [];
+                    }
+
+                    groups[groupIndex].push(curSite);
+                    groupWeight[groupIndex]= curWeight;
+                    startSiteIndex++;//去扫描下一个
+                    if(startSiteIndex>=scanArray.length){
+                        startSiteIndex=0;
+                    }
+                }
+            }else{
+                needGo=false;
+            }
+
+        }
+
+        return  {
+            groups:groups,//
+            weight:groupWeight
+        }
+    }
+
+
+
+
+
+
+    function calSiteTimes(sites){
+        var roadTimes = [];
+        var roadVals = [];
+        var siteNames =[];
+
+        for(var i=0;i<sites.length;i++){
+            var curSite = sites[i];
+            roadTimes.push(curSite.road/50);
+            siteNames.push(curSite.name);
+            roadVals.push(curSite.road);
+            if(i==sites.length-1){
+                roadTimes.push(curSite.lastRoad/50);
+                siteNames.push("仓库W");
+                roadVals.push(curSite.lastRoad);
+            }
+        }
+
+        var calAllTimes = function(roadTimes){
+            var timesArray =["从仓库7点开始出发"];
+            var times = 7;
+
+            var havelaunch = false;
+            //计算顺序的情况需要多少时间
+            for(var i=0;i<roadTimes.length;i++){
+                var tmpTime = roadTimes[i];
+                timesArray.push("<span style='font-weight:bold;line-height:20px;font-size:16px;'>到 "+siteNames[i]+", "+roadVals[i]+"公里,"+"里程时间为："+(tmpTime.toFixed(1))+"小时"+"</span>");
+
+                times = times+tmpTime;
+                if((times%24)>12&&!havelaunch){//到达时间超过12点 ------当到达时间在11-13点之间，讲吃饭和下货时间合并//(times%24)>11&&(times%24)<13
+                    times+=1;//每一次路过中午12点，进行吃饭，（并合并到达后的下货30分的时间）
+                    timesArray.push("路途经过中午12点，增加1小时吃饭-(+1)");
+                    havelaunch=true;
+                }
+
+                //此时times为预计的到达时间，下面针对窗口时间和休息时间进行时间加成
+
+
+
+                if((times%24)>=19 || (times%24)<=7){//直接时间的到达时间在19点-次日之间7点到，则需要加上12小时，作为休息时间的延长
+                    //经过夜间休息时间，增加12小时休息时间
+                    times+=12;
+                    timesArray.push("路程较长，需要早晚上从19点~次日7点之间休息-(+12)");
+                    havelaunch= false;
+                    timesArray.push("<span class='time-daoda'>到达时间为:"+showTime(times)+"</span>");
+
+
+                    if(i==roadTimes.length-1){
+                        timesArray.push("回到仓库，路程完毕。");
+                    }else{
+                        times+=0.5;
+                        timesArray.push("卸货增加0.5小时，离开时间为:"+showTime(times)+"");
+                        timesArray.push("==============================================================");
+                    }
+
+
+
+                }else if((times%24)>18&&(times%24)<19){//在18点-19点时间需要原地等待至19点，并休息12小时
+                    //是否超过窗口时间，如果超过窗口时间，增加12小时休息时间
+
+
+                    timesArray.push("<span class='time-daoda'>到达时间为:"+showTime(times)+"</span>");
+
+                    if(i==roadTimes.length-1){
+                        timesArray.push("回到仓库，路程完毕。");
+                    }else{
+
+                        times = Math.ceil(times)
+                        timesArray.push("已过窗口时间，18点-19点时间需要原地等待至19点，并休息12小时");
+                        times+=12;
+                        timesArray.push("开始于:"+showTime(times)+"卸货");
+                        times+=0.5;
+                        timesArray.push("卸货增加0.5小时，离开时间为:"+showTime(times)+"");
+
+                        timesArray.push("==============================================================");
+                    }
+
+
+                }else{
+                    timesArray.push("<span class='time-daoda'>到达时间为:"+showTime(times)+"</span>");
+
+                    if(i==roadTimes.length-1){
+                        timesArray.push("回到仓库，路程完毕。");
+                    }else{
+                        times+=0.5;
+                        timesArray.push("卸货增加0.5小时，离开时间为:"+showTime(times)+"");
+
+                        timesArray.push("==============================================================");
+                    }
+
+                }
+
+
+
+
+
+
+            }
+
+
+
+            return {
+                timeStrs:timesArray,
+                times:times
+            }
+        }
+
+
+
+        return calAllTimes(roadTimes);
+    }
+
+
+    /**
+     * 计算一组点的路程，时间等等
+     * @param sites
+     * @returns {{road: number, site: string, weight: number}}
+     */
+    function calGroupLineInfo(sites){// 每组因为是扫描过来的。所以，基本是一个 雨滴的形状，暂时不用考试在一条射线上的情况
+        var curRoad = 0;
+
+
+        var curRoadName = [];
+        var curWeight = 0;
+        for(var j=0;j<sites.length;j++){
+            var curSite = sites[j];
+            curRoadName.push(curSite.name);
+            curWeight += curSite.need;
+            if(j==0){
+                //计算从仓库过去的值
+                curSite.road = calCankuToSite(curSite) ;
+            }else {
+                curSite.road = calSiteToSite(curSite,sites[j-1]);
+                if(j==sites.length-1){//最后一个点
+                    curSite.lastRoad= calCankuToSite(curSite);
+                }
+            }
+        }
+
+        for(var k=0;k<sites.length;k++){
+            curRoad += sites[k].road;
+            if(k==sites.length-1){
+                curRoad+= sites[k].lastRoad;
+            }
+        }
+
+
+        var timeInfo = calSiteTimes(sites);
+
+
+
+
+        return {
+            road:curRoad,
+            site:curRoadName.join(","),
+            weight:curWeight,
+            times:timeInfo.times,
+            timeStrs:timeInfo.timeStrs
+        }
+    }
+
+
+
+
+    /**
+     * 输出配送路线列表
+     */
+    function outLine(outData){
+
+
+
+        var groups = outData.groups;
+
+
+        var lines = [];
+
+
+        for(var i=0;i<groups.length;i++){
+            var curLine = {};
+            var curGroup = groups[i];
+            curLine.num = (i+1);
+            var groupLineInfo = calGroupLineInfo(curGroup);
+
+            curLine.road = groupLineInfo.road;
+            curLine.site = groupLineInfo.site;
+            curLine.weight = groupLineInfo.weight;
+            curLine.times = groupLineInfo.times-7;//减去其实时间值
+            curLine.timeStrs = groupLineInfo.timeStrs;
+
+            lines.push(curLine);
+        }
+
+
+
+
+        console.log(lines);
+        var lineTemplate = _.template($("#J_line").html());
+        $("#J_out").html(lineTemplate({
+            lines:lines
+        }));
+
+    }
+
+
+
+
+
+</script>
+
+
+<script type="text/html" id="J_line" >
+
+    <table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>路线</td>
+            <td>站点</td>
+            <td>出发时间</td>
+            <td>出发日期</td>
+            <td>返回时间</td>
+            <td>返回日期</td>
+            <td>路程</td>
+            <td>运行时间（小时）</td>
+            <td>运载量（kg）</td>
+            <td>卡车载重量（kg）</td>
+        </tr>
+
+    </thead>
+    <tbody>
+            <%for(var i=0;i<lines.length;i++){
+
+                var curLine = lines[i];
+
+            %>
+            <tr>
+                <td><%=curLine.num%></td>
+                <td><%=curLine.site%></td>
+                <td>7:00AM</td>
+                <td>1</td>
+                <td><%=curLine.timeStrs.join("<Br>")%></td>
+                <td>-</td>
+                <td><%=curLine.road%></td>
+                <td><%=curLine.times.toFixed(1)%></td>
+                <td><%=curLine.weight%></td>
+                <td>4000</td>
+            </tr>
+            <%}%>
+    </tbody>
+
+</table>
+
+
+
+</script>
+
+<script>
+    $(document).ready(function(){
+        var outData =getByLined();// assign();
+        console.log(outData);
+        outLine(outData);
+    })
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,887 @@
+eg
+the area is 29.2247
+diary log1
+clc
+which eg
+D:\gitRoot\pronebel.github.io\try\matlab\study\eg.m
+editpath
+{未定义函数或变量 'editpath'。
+} 
+editpath
+{未定义函数或变量 'editpath'。
+} 
+clear
+clc
+editpath
+{未定义函数或变量 'editpath'。
+} 
+path
+
+		MATLABPATH
+
+	D:\document\MATLAB
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\matlabhdlcoder\matlabhdlcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\matlabhdlcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\testframework
+	D:\Program Files\MATLAB\R2014a\toolbox\matlabxl\matlabxl
+	D:\Program Files\MATLAB\R2014a\toolbox\matlabxl\matlabxldemos
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\demos
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\graph2d
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\graph3d
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\graphics
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\plottools
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\scribe
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\specgraph
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\uitools
+	D:\Program Files\MATLAB\R2014a\toolbox\local
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\optimfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\codetools
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\datafun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\datamanager
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\datatypes
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\elfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\elmat
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\funfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\general
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\guide
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\helptools
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\iofun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\lang
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\matfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\ops
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\polyfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\randfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\sparfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\specfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\strfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\timefun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\verctrl
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\winfun
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\winfun\NET
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\components
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\dee
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\asap2\asap2\dataclasses
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\asap2\asap2
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\asap2\asap2\user
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\common\can\blocks\dataclasses
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\common\can\blocks
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\common\can\blocks\tlc_c
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\common\tgtcommon
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\simulinkcoder\cgv\API
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\rtw\misra
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\simulinkcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\pil
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\AUTOSAR\AUTOSAR\dataclasses
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\AUTOSAR\AUTOSAR
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\accel
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\simulinkcoder_core
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\rtwdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\rtwdemos\rsimdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\blocks\library
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\blocks\library\simulinkcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\blocks\obsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\blocks
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\dataclasses
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\MPlayIO
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\dataobjectwizard
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\slresolve
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\mdlrefadvisor
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\dataclasses
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\aerospace
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\automotive
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\automotive\powerwindow
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\simfeatures
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\automotive\fuelsys
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\simgeneral
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simdemos\industrial
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\modeladvisor
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\modeladvisor\fixpt
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sdi
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\frameedit
+	D:\Program Files\MATLAB\R2014a\toolbox\stateflow\stateflow
+	D:\Program Files\MATLAB\R2014a\toolbox\stateflow\coder
+	D:\Program Files\MATLAB\R2014a\toolbox\stateflow\sfdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\aero\aero
+	D:\Program Files\MATLAB\R2014a\toolbox\aeroblks\aeroblks
+	D:\Program Files\MATLAB\R2014a\toolbox\aeroblks\aeroblksutilities
+	D:\Program Files\MATLAB\R2014a\toolbox\aeroblks\aerodemos
+	D:\Program Files\MATLAB\R2014a\toolbox\aeroblks\aerodemos\texture
+	D:\Program Files\MATLAB\R2014a\toolbox\aero\astdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\apps
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\audiovideo
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\bioinfo
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\biolearning
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\microarray
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\mass_spec
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\proteins
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\biomatrices
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\graphtheory
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\bioinfodata
+	D:\Program Files\MATLAB\R2014a\toolbox\bioinfo\biodemos
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\codegendemos
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\coder
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\connectivity
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\connectivity
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\emlcodermex
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\coverage
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\foundation
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\foundation\build
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\foundation\build\tools\registry
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\foundation\tfl
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\foundation\tfl\gui
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\foundation\templates
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\simtargets
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\matlabcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\matlabcoder\templates
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\profile
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\rtiostream
+	D:\Program Files\MATLAB\R2014a\toolbox\comm\comm
+	D:\Program Files\MATLAB\R2014a\toolbox\comm\commutilities\comminit
+	D:\Program Files\MATLAB\R2014a\toolbox\comm\commutilities\commmex
+	D:\Program Files\MATLAB\R2014a\toolbox\comm\commutilities
+	D:\Program Files\MATLAB\R2014a\toolbox\comm\commdeprecated
+	D:\Program Files\MATLAB\R2014a\toolbox\comm\commdemos
+	D:\Program Files\MATLAB\R2014a\help\toolbox\comm\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\comparisons
+	D:\Program Files\MATLAB\R2014a\toolbox\compiler
+	D:\Program Files\MATLAB\R2014a\toolbox\compiler\compilerdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\configtools
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\connector\connector
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\connector\connector\common
+	D:\Program Files\MATLAB\R2014a\toolbox\control\control
+	D:\Program Files\MATLAB\R2014a\toolbox\control\ctrlguis
+	D:\Program Files\MATLAB\R2014a\toolbox\control\ctrlobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\control\ctrlutil
+	D:\Program Files\MATLAB\R2014a\toolbox\control\ctrldemos
+	D:\Program Files\MATLAB\R2014a\help\toolbox\control\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\curvefit\curvefit
+	D:\Program Files\MATLAB\R2014a\toolbox\curvefit\splines
+	D:\Program Files\MATLAB\R2014a\toolbox\curvefit\cftoolgui
+	D:\Program Files\MATLAB\R2014a\toolbox\curvefit\sftoolgui
+	D:\Program Files\MATLAB\R2014a\toolbox\curvefit\curvefitdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\daq\daq
+	D:\Program Files\MATLAB\R2014a\toolbox\daq\daqguis
+	D:\Program Files\MATLAB\R2014a\toolbox\daq\daqdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\database\database
+	D:\Program Files\MATLAB\R2014a\toolbox\database\vqb
+	D:\Program Files\MATLAB\R2014a\toolbox\database\dbdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\datafeed\datafeed
+	D:\Program Files\MATLAB\R2014a\toolbox\datafeed\dfgui
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\distcomp
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\user
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\mpi
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\parallel
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\parallel\util
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\lang
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\cluster
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\gpu
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\array
+	D:\Program Files\MATLAB\R2014a\toolbox\distcomp\pctdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\dotnetbuilder\dotnetbuilder
+	D:\Program Files\MATLAB\R2014a\toolbox\dotnetbuilder\dotnetbuilderdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\qualkits\do
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\dsp
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\dsputilities
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\dsputilities\dspinit
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\dsputilities\dspmex
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\dspdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\dspdeployabledemos
+	D:\Program Files\MATLAB\R2014a\help\toolbox\dsp\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\simulink\dsp
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\ecoder
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\mpt
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\mpt\mpt
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\mpt\user_specific
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\embeddedcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\ecoder\ecoderdemos\dataclasses
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\ecoder\ecoderdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\econ\econ
+	D:\Program Files\MATLAB\R2014a\toolbox\econ\econdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\edalink
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlverifier\hdlverifier
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\tlmgenerator\foundation
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\tlmgenerator\foundation\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\tlmgenerator\foundation\tlmgeneratordemos
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\foundation\hdllink
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\foundation\dpigenerator
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\foundation\dpigenerator\src
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\foundation\dpigenerator\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\target\kernel\embedded
+	D:\Program Files\MATLAB\R2014a\toolbox\eml\eml
+	D:\Program Files\MATLAB\R2014a\toolbox\exlink
+	D:\Program Files\MATLAB\R2014a\toolbox\dsp\filterdesign
+	D:\Program Files\MATLAB\R2014a\toolbox\finance\finance
+	D:\Program Files\MATLAB\R2014a\toolbox\finance\calendar
+	D:\Program Files\MATLAB\R2014a\toolbox\finance\finsupport
+	D:\Program Files\MATLAB\R2014a\toolbox\finance\ftseries
+	D:\Program Files\MATLAB\R2014a\toolbox\finance\findemos
+	D:\Program Files\MATLAB\R2014a\toolbox\fininst\fininst
+	D:\Program Files\MATLAB\R2014a\toolbox\fininst\fininstdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\fixedpoint\fixedpointtool
+	D:\Program Files\MATLAB\R2014a\toolbox\fixedpoint\fidemos
+	D:\Program Files\MATLAB\R2014a\toolbox\fixedpoint\fixedpoint
+	D:\Program Files\MATLAB\R2014a\toolbox\fixpoint
+	D:\Program Files\MATLAB\R2014a\toolbox\fixpoint\fpca
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\fixedandfloat\fxpdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\float2fixed
+	D:\Program Files\MATLAB\R2014a\toolbox\coder\float2fixed\dmm_emlauthoring
+	D:\Program Files\MATLAB\R2014a\toolbox\fuzzy\fuzzy
+	D:\Program Files\MATLAB\R2014a\toolbox\fuzzy\fuzzyutil
+	D:\Program Files\MATLAB\R2014a\toolbox\fuzzy\fuzdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\geoweb\geoweb
+	D:\Program Files\MATLAB\R2014a\toolbox\globaloptim
+	D:\Program Files\MATLAB\R2014a\toolbox\globaloptim\globaloptim
+	D:\Program Files\MATLAB\R2014a\toolbox\globaloptim\globaloptimdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\glue
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\glue\studio
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdlcoder
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdlcoder\hdlwa
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdlcoderdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdlcoderdemos\matlabhdlcoderdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdlcommon
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlfilter\hdlfilter
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlfilter\hdlfiltdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdllib\ml_lib
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlcoder\hdllib\sl_lib
+	D:\Program Files\MATLAB\R2014a\toolbox\hdlverifier\hdlverifier_examples
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\eclipseide
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\eclipseide\mdlinfo
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\eclipseide\registry
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\eclipseide\tfl
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\ccsblks
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\ccslinkblks
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\ccslinkblks\rtdxsimblks
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\lic
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\mdlinfo
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\tfl
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\util
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\envChecker
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\tgtpref2
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\profiler
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\mdlinfo
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\blks
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\blks\masks
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\pjtgenerator\blks\tlc_c
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\autointerface
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\autointerface\ideregisterplugins
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\util
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\errorhandler
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\xmakefile
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\foundation\hookpoints
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\idelinkdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\eclipseide\eclipseidedemos
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\ccsdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\idelink\extensions\ticcs\ccsdemos\util
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\ident
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\nlident
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\idobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\idguis
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\idutils
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\idhelp
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\iddemos
+	D:\Program Files\MATLAB\R2014a\toolbox\ident\iddemos\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\qualkits\iec
+	D:\Program Files\MATLAB\R2014a\toolbox\images\colorspaces
+	D:\Program Files\MATLAB\R2014a\toolbox\images\images
+	D:\Program Files\MATLAB\R2014a\toolbox\images\imdata
+	D:\Program Files\MATLAB\R2014a\toolbox\images\imuitools
+	D:\Program Files\MATLAB\R2014a\toolbox\images\iptformats
+	D:\Program Files\MATLAB\R2014a\toolbox\images\iptutils
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\imagesci
+	D:\Program Files\MATLAB\R2014a\toolbox\images\imdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\imaq\imaq
+	D:\Program Files\MATLAB\R2014a\toolbox\imaq\imaqblks\imaqblks
+	D:\Program Files\MATLAB\R2014a\toolbox\imaq\imaqblks\imaqmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\imaq\imaqblks\imaqmex
+	D:\Program Files\MATLAB\R2014a\toolbox\imaq\imaqdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\extensions\incisive\incisive
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\extensions\incisive\incisivedemos
+	D:\Program Files\MATLAB\R2014a\toolbox\instrument\instrument
+	D:\Program Files\MATLAB\R2014a\toolbox\instrument\instrumentblks\instrumentblks
+	D:\Program Files\MATLAB\R2014a\toolbox\instrument\instrumentblks\instrumentmex
+	D:\Program Files\MATLAB\R2014a\toolbox\instrument\instrumentblks\instrumentmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\instrument\instrumentdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\instrument
+	D:\Program Files\MATLAB\R2014a\toolbox\javabuilder\javabuilder
+	D:\Program Files\MATLAB\R2014a\toolbox\javabuilder\javabuilderdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\lte\lte
+	D:\Program Files\MATLAB\R2014a\toolbox\lte\lteobsolete
+	D:\Program Files\MATLAB\R2014a\help\toolbox\lte\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\lte\lteexamples
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\m3i
+	D:\Program Files\MATLAB\R2014a\toolbox\map\map
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapgeodesy
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapdisp
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapformats
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapproj
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapdata
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapdata\sdts
+	D:\Program Files\MATLAB\R2014a\toolbox\map\mapdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbc
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcdata
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcdesign
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcexpr
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcguitools
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbclayouts
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcmodels
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcsimulink
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbctools
+	D:\Program Files\MATLAB\R2014a\toolbox\mbc\mbcview
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\extensions\modelsim\modelsim
+	D:\Program Files\MATLAB\R2014a\toolbox\edalink\extensions\modelsim\modelsimdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\mpc\mpc
+	D:\Program Files\MATLAB\R2014a\toolbox\mpc\mpcdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\mpc\mpcguis
+	D:\Program Files\MATLAB\R2014a\toolbox\mpc\mpcobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\mpc\mpcutils
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nncontrol
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnadapt
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nndatafun
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnderivative
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nndistance
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nndivision
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nninitlayer
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nninitnetwork
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nninitweight
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnlearn
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnnetfun
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnnetinput
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnnetwork
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnperformance
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnplot
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnprocess
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnsearch
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nntopology
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nntrain
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nntransfer
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnet\nnweight
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnguis
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nnutils
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nndemos
+	D:\Program Files\MATLAB\R2014a\toolbox\nnet\nndemos\nndatasets
+	D:\Program Files\MATLAB\R2014a\toolbox\opc\opc
+	D:\Program Files\MATLAB\R2014a\toolbox\opc\opcgui
+	D:\Program Files\MATLAB\R2014a\toolbox\opc\opcdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\opc\opcdemos\opcblksdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\opc\opcblks\opcblks
+	D:\Program Files\MATLAB\R2014a\toolbox\opc\opcblks\opcmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\optim\optim
+	D:\Program Files\MATLAB\R2014a\toolbox\optim
+	D:\Program Files\MATLAB\R2014a\toolbox\optim\optimdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\pde
+	D:\Program Files\MATLAB\R2014a\toolbox\pde\pdedemos
+	D:\Program Files\MATLAB\R2014a\toolbox\phased\phased
+	D:\Program Files\MATLAB\R2014a\toolbox\phased\phasedapps
+	D:\Program Files\MATLAB\R2014a\toolbox\phased\phaseddemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\dataservices\core\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\dataservices\gui\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\dataservices\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\dataservices\sli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\data\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\foundation\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\gl\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\gl\sli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\common\units\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\drive\drive
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\drive\drivedemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\elec\elec
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\elec\elecdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\equation_language\equation_language
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\gui\gfx\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\mech\mech
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\mech\importer
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\mech\mechdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\network_engine\network_engine
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\ne_sli\ne_sli
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\pe\pedemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\pe\library\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\pe\utils\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\pm_sli\pm_sli
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\pm_visimpl\pm_visimpl
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powersys
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\DR\DR
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\drives\drives
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\facts\facts
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powerdemo
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powerdemo\meascontrol
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powerdemo\power_utility
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\drives\drivesdemo
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\DR\DRdemo
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\facts\factsdemo
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powerdemo\machines
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powerdemo\power_electronics
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\powersys\powerdemo\simple
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sdl\sdl
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sdl\classic
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sdl\sdldemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sh\sh
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sh\shdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simrf\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\compiler\core\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\compiler\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\compiler\sli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\simscapedemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\engine\core\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\engine\mli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\engine\sli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\foundation\simscape
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\library\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\simscape\simscape\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\core\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\wing_landing_gear
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\wing_landing_gear\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\cart_double_pendulum
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\cart_double_pendulum\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\stewart_platform
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\stewart_platform\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\double_crank_aiming
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\double_crank_aiming\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\bread_slicer
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\bread_slicer\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\import\stewart_platform
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\import\four_bar
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\radial_engine
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\radial_engine\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\double_wishbone_suspension
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\double_wishbone_suspension\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\import\robot
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\cardan_gear
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\cardan_gear\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\windshield_wiper
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\windshield_wiper\images
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\backhoe
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\robotic_wrist
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\carousel
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\smdemos\welding_robot
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\docexamples
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\gui\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\import\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\local\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\sli\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\sm\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sm\ssci\m
+	D:\Program Files\MATLAB\R2014a\toolbox\physmod\sps\sps
+	D:\Program Files\MATLAB\R2014a\toolbox\plccoder\plccoder
+	D:\Program Files\MATLAB\R2014a\toolbox\plccoder\plugins\omron
+	D:\Program Files\MATLAB\R2014a\toolbox\plccoder\plccoderdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\polyspace\psbugfinder
+	D:\Program Files\MATLAB\R2014a\toolbox\polyspace\pscodeprover
+	D:\Program Files\MATLAB\R2014a\toolbox\polyspace\pscore\pscore
+	D:\Program Files\MATLAB\R2014a\toolbox\polyspace\psdistcomp\psdistcomp
+	D:\Program Files\MATLAB\R2014a\polyspace\toolbox\pslink\pslink
+	D:\Program Files\MATLAB\R2014a\polyspace\toolbox\pslink\pslinkdemos\psdemo_model_link_sl
+	D:\Program Files\MATLAB\R2014a\polyspace\toolbox\psrptgen\psrptgen
+	D:\Program Files\MATLAB\R2014a\toolbox\qualkits\common
+	D:\Program Files\MATLAB\R2014a\toolbox\realtime
+	D:\Program Files\MATLAB\R2014a\toolbox\realtime\realtime
+	D:\Program Files\MATLAB\R2014a\toolbox\realtime\realtime\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\rf\rf
+	D:\Program Files\MATLAB\R2014a\toolbox\rf\rfnetparamfiles
+	D:\Program Files\MATLAB\R2014a\toolbox\rf\rftool
+	D:\Program Files\MATLAB\R2014a\toolbox\rfblks\rfblks
+	D:\Program Files\MATLAB\R2014a\toolbox\rfblks\rfblksmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\rfblks\rfblksmex
+	D:\Program Files\MATLAB\R2014a\toolbox\rfblks\rfblksdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\rf\rfdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\robust
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctlmi
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctutil
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctguis
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctobsolete\robust
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctobsolete\lmi
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctobsolete\mutools\commands
+	D:\Program Files\MATLAB\R2014a\toolbox\robust\rctobsolete\mutools\subs
+	D:\Program Files\MATLAB\R2014a\help\toolbox\robust\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgen\rptgen
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgenext\rptgenext
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgenext\rptgenextdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgenext\rptgenextdemos\flutter_suppression
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgenext\rptgenextdemos\sdd
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgenext\slxmlcomp
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgenext\rptgenextdemos\slxmlcomp
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgen\rptgendemos
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgen\xmlcomp
+	D:\Program Files\MATLAB\R2014a\toolbox\rptgen\xmlcomp\demos
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\rtwin\rtwin
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\rtwin\rtwindemos
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\blocks\sb2sl
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\advisor
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\asynciolib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\can
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\can\canblks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\can\canmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\can\canmex
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\cgir_fe
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\cgxe\cgxe
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\coder\coder
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\configset
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\engine
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\engine\numerics
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\engine\options
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\engine\optim
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\general
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\graphics
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\graphics\utils
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\graphics\plotoptions
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\controllib\requirements
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\curvefitlib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dastudio
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dastudio\depviewer
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dspblks\dspblks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dspblks\dspmex
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\dialog
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\hdl
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\matlab\utilities
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\simulink\utilities
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\matlab\utilities\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\simulink\utilities\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\matlab\utilities\init
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\matlab\vision
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\dsp\vision\simulink\vision
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\board
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\edagraph
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\fil
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\fil\filmapi
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\fil\fildemos
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\fpgaautomation
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\fpgaautomation\obsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\fpgabase
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\eda\hdlparser
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\filterdesignlib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\hdlshared
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\hdlshared\hdlshared_gui
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\hwconnectinstaller
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\hwconnectinstaller\common
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\imageslib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\imaqlib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\mapgeodesy
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\maputils
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\measure
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\mlreportgen\dom
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\mlreportgen\dom\dom
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\mlreportgen\dom\dom\help
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\multimedia
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\networklib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\optimlib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\pdelib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\reqmgt
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\reqmgt
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\reqmgt\RTExplorer
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\rptgen
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\sdi
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\sigbldr
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\siglib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\slcontrollib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\sldv
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\slvnv
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\slvnv
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\simcoverage
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\sl_async_streaming
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\spcuilib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\statslib
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\statslib\sensitivity
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\system\coder
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\system\coreblocks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\system\preferences
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\system\sfun
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\system\simulink
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\testconsole
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\testmeaslib\general
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\testmeaslib\graphics
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\testmeaslib\simulink
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\xcp
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\xcp\xcpblks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\xcp\xcpmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\xcp\xcpmex
+	D:\Program Files\MATLAB\R2014a\toolbox\signal\signal
+	D:\Program Files\MATLAB\R2014a\toolbox\signal\sigtools
+	D:\Program Files\MATLAB\R2014a\toolbox\signal\sptoolgui
+	D:\Program Files\MATLAB\R2014a\toolbox\signal\sigdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\simbio\simbio
+	D:\Program Files\MATLAB\R2014a\toolbox\simbio\simbiodemos
+	D:\Program Files\MATLAB\R2014a\toolbox\simevents\simevents
+	D:\Program Files\MATLAB\R2014a\toolbox\simevents\simevents\icons
+	D:\Program Files\MATLAB\R2014a\toolbox\des\desblks
+	D:\Program Files\MATLAB\R2014a\toolbox\des\desmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\des\desmex
+	D:\Program Files\MATLAB\R2014a\toolbox\simevents\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\simrf\simrf
+	D:\Program Files\MATLAB\R2014a\toolbox\simrf\simrfV2
+	D:\Program Files\MATLAB\R2014a\toolbox\simrf\simrfV2masks
+	D:\Program Files\MATLAB\R2014a\help\toolbox\simrf\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\simrf\simrfV2demos
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\simulink
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\simulation_data_repository
+	D:\Program Files\MATLAB\R2014a\toolbox\sl3d\sl3d
+	D:\Program Files\MATLAB\R2014a\toolbox\sl3d\sl3ddemos
+	D:\Program Files\MATLAB\R2014a\toolbox\slci\slci
+	D:\Program Files\MATLAB\R2014a\toolbox\slci\slcidemos
+	D:\Program Files\MATLAB\R2014a\toolbox\slcontrol\slcontrol
+	D:\Program Files\MATLAB\R2014a\toolbox\slcontrol\slctrlguis
+	D:\Program Files\MATLAB\R2014a\toolbox\slcontrol\slctrlutil
+	D:\Program Files\MATLAB\R2014a\toolbox\slcontrol\slctrlobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\slcontrol\slctrldemos
+	D:\Program Files\MATLAB\R2014a\help\toolbox\slcontrol\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldo
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldoguis
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sloptim\sloptim
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sloptim\sloptguis
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sloptim\sloptobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\slestim\slestguis
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\slestim\slestim
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\slestim\slestmex
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\slestim\slestutil
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldodemos
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldodemos\optim
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldodemos\estim
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldodemos\estim\docexamples\adaptive
+	D:\Program Files\MATLAB\R2014a\toolbox\sldo\sldodemos\estim\docexamples\lookuptable
+	D:\Program Files\MATLAB\R2014a\help\toolbox\sldo\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\sldv\sldv
+	D:\Program Files\MATLAB\R2014a\toolbox\sldv\sldvdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\slproject
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\slproject\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\slreportgen\webview
+	D:\Program Files\MATLAB\R2014a\toolbox\slrt\slrt
+	D:\Program Files\MATLAB\R2014a\toolbox\slrt\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\slrt\blocks
+	D:\Program Files\MATLAB\R2014a\toolbox\slrt\blocks\flexray
+	D:\Program Files\MATLAB\R2014a\toolbox\slrt\blocks\protocols
+	D:\Program Files\MATLAB\R2014a\toolbox\slrt\slrtexamples
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\slvnvdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\rmidemos
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\simcovdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\do178b
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\iec61508
+	D:\Program Files\MATLAB\R2014a\toolbox\slvnv\styleguide
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sl_async_streaming
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\fixedandfloat
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\fixedandfloat\obsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\iodata\iomap
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\iodata\ioedit
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\iodata\ioedit\util
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\iodata\ioformat
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\performance
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\performance\performancea
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simharness\simharness
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\comparisontool
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\mapping
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\mapping\callbacks
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\mapping\util
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\toolstrip
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\toolstrip\open\streaming
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\signalproperty
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\toolstrip\help
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\ui\toolstrip\open
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\sta\repository
+	D:\Program Files\MATLAB\R2014a\toolbox\simulink\simulink\upgradeadvisor
+	D:\Program Files\MATLAB\R2014a\toolbox\stats\stats
+	D:\Program Files\MATLAB\R2014a\toolbox\stats\classreg
+	D:\Program Files\MATLAB\R2014a\toolbox\stats\clustering
+	D:\Program Files\MATLAB\R2014a\toolbox\stats\statsdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\stm\stm
+	D:\Program Files\MATLAB\R2014a\toolbox\stm\stmdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\symbolic\symbolic
+	D:\Program Files\MATLAB\R2014a\toolbox\symbolic\symbolicdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\systemtest\systemtest
+	D:\Program Files\MATLAB\R2014a\toolbox\systemtest\systemtest\removed
+	D:\Program Files\MATLAB\R2014a\toolbox\systemtest\systemtestdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\system
+	D:\Program Files\MATLAB\R2014a\toolbox\target\codertarget
+	D:\Program Files\MATLAB\R2014a\toolbox\target\codertarget\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\intelhost\tfl
+	D:\Program Files\MATLAB\R2014a\toolbox\target
+	D:\Program Files\MATLAB\R2014a\toolbox\target\foundation
+	D:\Program Files\MATLAB\R2014a\toolbox\target\foundation\utils
+	D:\Program Files\MATLAB\R2014a\toolbox\target\foundation\utils\resource_config
+	D:\Program Files\MATLAB\R2014a\toolbox\target\foundation\blks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\foundation\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\foundation\blks\masks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared\ti
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared\ti\mdlinfo
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared\ti\utils
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared\ti\blks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared\ti\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\shared\ti\blks\masks
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\etargets\etargets
+	D:\Program Files\MATLAB\R2014a\toolbox\shared\etargets\etargets\demoutils
+	D:\Program Files\MATLAB\R2014a\toolbox\target\targetdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic2000
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic2000\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic2000\utils
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic2000\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic5000
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic5000\blks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic5000\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic5000\blks\masks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic5000\tic5000demos
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic6000
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic6000\rtw
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic6000\tfl
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic6000\utils
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic6000\blks\sysobj_mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\processor\tic6000\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\linux\blks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\linux\blks\masks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\linux\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\linux\src
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\windows\blks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\windows\blks\masks
+	D:\Program Files\MATLAB\R2014a\toolbox\target\extensions\operatingsystem\windows\blks\mex
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\timeseries
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\hds
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\toolstrip
+	D:\Program Files\MATLAB\R2014a\toolbox\trading\trading
+	D:\Program Files\MATLAB\R2014a\toolbox\trading\tradingdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\vision\vision
+	D:\Program Files\MATLAB\R2014a\toolbox\vision\visionutilities
+	D:\Program Files\MATLAB\R2014a\toolbox\vision\visionutilities\visioninit
+	D:\Program Files\MATLAB\R2014a\toolbox\vision\visionutilities\visionmex
+	D:\Program Files\MATLAB\R2014a\toolbox\vision\visiondemos
+	D:\Program Files\MATLAB\R2014a\help\toolbox\vision\examples
+	D:\Program Files\MATLAB\R2014a\toolbox\vnt\vnt
+	D:\Program Files\MATLAB\R2014a\toolbox\vnt\vntguis
+	D:\Program Files\MATLAB\R2014a\toolbox\vnt\vntdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\vnt\vntblks\vntblks
+	D:\Program Files\MATLAB\R2014a\toolbox\vnt\vntblks\vntmasks
+	D:\Program Files\MATLAB\R2014a\toolbox\vnt\vntblks\vntmex
+	D:\Program Files\MATLAB\R2014a\toolbox\wavelet\wavelet
+	D:\Program Files\MATLAB\R2014a\toolbox\wavelet\wmultisig1d
+	D:\Program Files\MATLAB\R2014a\toolbox\wavelet\wavedemo
+	D:\Program Files\MATLAB\R2014a\toolbox\wavelet\compression
+	D:\Program Files\MATLAB\R2014a\toolbox\matlab\webcam
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\xpc
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\target\build\xpcblocks\thirdpartydrivers
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\target\build\xpcblocks
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\target\build\xpcobsolete
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\xpcdemos
+	D:\Program Files\MATLAB\R2014a\toolbox\rtw\targets\xpc\xpc\xpcmngr
+clc
+edit path
+clc
+editpath
+{未定义函数或变量 'editpath'。
+} 
+clear
+clc
+eg
+the area is 29.2247
+z
+
+z =
+
+   576
+
+plot01
+clc
+vara = 1+i
+
+vara =
+
+   1.0000 + 1.0000i
+
+var = 40*i
+
+var =
+
+   0.0000 +40.0000i
+
+clc
+var2 = var/5
+
+var2 =
+
+   0.0000 + 8.0000i
+
+array = [1 2 3 4];
+array2 = [1,2,3,4];
+a=1;y=2;
+clear
+clc
+[3.4]
+
+ans =
+
+    3.4000
+
+[1 2 3]
+
+ans =
+
+     1     2     3
+
+clc
+[1;2;3]
+
+ans =
+
+     1
+     2
+     3
+
+clc
+[1,2,3;4,5,6]
+
+ans =
+
+     1     2     3
+     4     5     6
+
+clc
+[1,2,3
+4,5,6
+7,8,9]
+
+ans =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+[1,2,3
+1,2]
+{错误使用 <a href="matlab:helpUtils.errorDocCallback('vertcat')" style="font-weight:bold">vertcat</a>
+串联的矩阵的维度不一致。
+} 
+clc
+clc
+a=[0 1+7]
+
+a =
+
+     0     8
+
+b=[a(2) 7 a]
+
+b =
+
+     8     7     0     8
+
+clc
+cleasr
+{未定义函数或变量 'cleasr'。
+} 
+clearclear
+{未定义函数或变量 'clearclear'。
+} 
+clear
+quit
