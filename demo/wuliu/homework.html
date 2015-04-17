@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
     <style>
         .time-daoda{color:red;}
+        .addNum{font-size:14px;color:blue; font-weight:bold;}
     </style>
     <script src="jquery.js"></script>
     <script src="underscore.js"></script>
@@ -184,7 +185,7 @@
                 times = times+tmpTime;
                 if((times%24)>12&&!havelaunch){//到达时间超过12点 ------当到达时间在11-13点之间，讲吃饭和下货时间合并//(times%24)>11&&(times%24)<13
                     times+=1;//每一次路过中午12点，进行吃饭，（并合并到达后的下货30分的时间）
-                    timesArray.push("路途经过中午12点，增加1小时吃饭-(+1)");
+                    timesArray.push("经过中午12点，增加1小时吃饭(<span class='addNum'>+1</span>)");
                     havelaunch=true;
                 }
 
@@ -195,7 +196,7 @@
                 if((times%24)>=19 || (times%24)<=7){//直接时间的到达时间在19点-次日之间7点到，则需要加上12小时，作为休息时间的延长
                     //经过夜间休息时间，增加12小时休息时间
                     times+=12;
-                    timesArray.push("路程较长，需要早晚上从19点~次日7点之间休息-(+12)");
+                    timesArray.push("路程较长，从19点~次日7点之间休息(<span class='addNum'>+12</span>)");
                     havelaunch= false;
                     timesArray.push("<span class='time-daoda'>到达时间为:"+showTime(times)+"</span>");
 
@@ -204,8 +205,8 @@
                         timesArray.push("回到仓库，路程完毕。");
                     }else{
                         times+=0.5;
-                        timesArray.push("卸货增加0.5小时，离开时间为:"+showTime(times)+"");
-                        timesArray.push("==============================================================");
+                        timesArray.push("卸货增加(<span class='addNum'>0.5</span>)小时，离开时间为:"+showTime(times)+"");
+                        timesArray.push("-------------------------");
                     }
 
 
@@ -221,13 +222,13 @@
                     }else{
 
                         times = Math.ceil(times)
-                        timesArray.push("已过窗口时间，18点-19点时间需要原地等待至19点，并休息12小时");
+                        timesArray.push("已过窗口时间，18点-19点时间需要原地等待至19点，并休息(<span class='addNum'>+12</span>)小时");
                         times+=12;
                         timesArray.push("开始于:"+showTime(times)+"卸货");
                         times+=0.5;
-                        timesArray.push("卸货增加0.5小时，离开时间为:"+showTime(times)+"");
+                        timesArray.push("卸货增加(<span class='addNum'>0.5</span>)小时，离开时间为:"+showTime(times)+"");
 
-                        timesArray.push("==============================================================");
+                        timesArray.push("-------------------------");
                     }
 
 
@@ -238,9 +239,9 @@
                         timesArray.push("回到仓库，路程完毕。");
                     }else{
                         times+=0.5;
-                        timesArray.push("卸货增加0.5小时，离开时间为:"+showTime(times)+"");
+                        timesArray.push("卸货增加(<span class='addNum'>0.5</span>)小时，离开时间为:"+showTime(times)+"");
 
-                        timesArray.push("==============================================================");
+                        timesArray.push("-------------------------");
                     }
 
                 }
