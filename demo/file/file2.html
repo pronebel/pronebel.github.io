@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>分度读取文件：</legend>
+        <input type="file" id="File"/>
+        <input type="button" value="中断" id="Abort"/>
+
+        <p>
+            <label>读取进度：</label>
+            <progress id="Progress" value="0" max="100"></progress>
+        </p>
+        <p id="Status"></p>
+
+        <div id="J_out">
+
+        </div>
+    </fieldset>
+</form>
+
+<script src="assets/js/jquery-2.0.3.min.js"></script>
+<script>
+
+
+    var FileUpload = (function(){
+
+
+
+
+        var __fileRead = null;
+
+
+        var onLoadStart = function(){
+            console.log("start");
+        }
+
+        var onAbort= function () {
+            console.log("onAbort");
+        }
+        var onError= function () {
+            console.log("onError");
+        }
+        var abortHandler= function (fileRead) {
+            if (fileRead) {
+                fileRead.abort();
+            }
+        }
+
+        var __fileCtrl = {
+            init: function () {
+                var that = this;
+
+                document.getElementById('File').onchange = that.fileHandler;
+                document.getElementById('Abort').onclick = function(){
+                    abortHandler()
+                };
+
+                that.status = document.getElementById('Status');
+                that.progress = document.getElementById('Progress');
+                that.percent = document.getElementById('Percent');
+
+                that.loaded = 0;
+                //每次读取1M
+                that.step = 1024* 1024;
+                that.times = 0;
+            },
+            fileHandler: function (e) {
+                var that = __fileCtrl;
+
+                var file = that.file = this.files[0];
+
+                var reader = that.reader = new FileReader();
+
+                //
+                that.total = file.size;
+
+                reader.onloadstart = onLoadStart;
+                reader.onprogress = that.progress;
+                reader.onabort = onAbort;
+                reader.onerror = onError;
+                reader.onload = that.onLoad;
+                reader.onloadend = that.onLoadEnd;
+                //读取第一块
+                that.readBlob( 0);
+            },
+
+            progress: function (e) {
+                console.log("progress");
+                var me = __fileCtrl;
+
+                me.loaded += e.loaded;
+                //更新进度条
+                me.progress.value = (me.loaded / me.total) * 100;
+            },
+
+            onLoad: function () {
+
+                console.log("onLoad");
+
+                var me = __fileCtrl;
+                var strResult = this.result;
+
+
+
+                var lastLine = strResult.lastIndexOf("\n");
+                 strResult = strResult.substring(0,lastLine);
+                console.log("++++"+strResult+"-----------------");
+                if (me.loaded < me.total) {
+                    console.log(me.total+","+me.loaded);
+                    me.loaded = me.loaded -  (me.step-lastLine);
+                   me.readBlob(me.loaded);
+                } else {
+                    me.loaded = me.total;
+                    console.log("======================================" + me.times+"M");
+                }
+
+
+
+
+
+
+
+
+
+                //$("#J_out").prepend("<p style='margrin-bottom:20px;'>" + strResult.replace(/\n/g, "<br>") + "</p>");
+
+
+
+
+            },
+            onLoadEnd: function () {
+                console.log("onLoadEnd");
+                var me = __fileCtrl;
+
+            },
+            readBlob: function (start) {
+                console.log("readBlob");
+                var me = __fileCtrl;
+                me.times += 1;
+                $("#J_out").prepend("<p style='margrin-bottom:20px;'>======================================" + me.times+"</p>");
+
+
+                var file = me.file;
+                var blob = file.slice(start, start + me.step + 1);
+
+
+
+                me.reader.readAsText(blob);
+
+            },
+
+        };
+
+
+        return __fileCtrl;
+    })()
+
+
+
+    FileUpload.init();
+</script>
+</body>
+</html>

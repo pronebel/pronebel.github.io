@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>分度读取文件：</legend>
+        <input type="file" id="J_file"/>
+        <input type="button" value="上传" id="J_fileSubmit"/>
+
+        <p>
+            <label>读取进度：</label>
+            <progress id="Progress" value="0" max="100"></progress>
+        </p>
+
+
+        <div id="J_out">
+
+        </div>
+    </fieldset>
+</form>
+
+<script src="assets/js/jquery-2.0.3.min.js"></script>
+<script>
+
+
+    var FileUpload = function(opts){
+
+        var __this = this;
+
+        var __file = null;
+        var __reader = null;
+
+        var options = {
+            step: 1024* 1024,
+            file:null,
+            reader:{
+                start:function(){
+                    console.log("start");
+                },
+                progress:function(){},
+
+                abort:function(){
+                    console.log("abort");
+                    if (__reader) {
+                        __reader.abort();
+                    }
+                },
+                load:function(){
+
+                },
+                loadParse:function(){
+
+                },
+                error:function(){
+                    console.log("error");
+                },
+                loadend:function(){
+                    console.log("loadend");
+                }
+            }
+
+        }
+        var __loaded = 0;
+        var __times = 0;
+
+        var __fileInfo={
+            total:0
+
+        }
+
+
+
+
+
+        this.readBlob=function (start) {//console.log("readBlob");
+
+            __times += 1;
+            var blob = __file.slice(start, start + options.step + 1);
+
+            __reader.readAsText(blob);
+
+        }
+
+
+
+        this.upload =  function (fileDom) {
+
+            __file = fileDom.files[0];
+            __reader = new FileReader();
+            __fileInfo.total = __file.size;
+
+            __reader.onloadstart = options.reader.start;
+            __reader.onprogress = onProgress;
+            __reader.onabort = options.reader.abort;
+            __reader.onerror = options.reader.error;
+            __reader.onload = onLoad;
+            __reader.onloadend =options.reader.loadend;
+
+            __this.readBlob(0);//读取第一块
+        }
+
+
+        var onProgress= function (e) {
+
+            __loaded += e.loaded;
+            var progressValue = (__loaded / __fileInfo.total) * 100;
+            options.reader.progress(progressValue);          //更新进度条
+        }
+
+
+        var onLoad= function () {
+
+            var strResult = this.result;
+
+            var lastLine = strResult.lastIndexOf("\n");
+            strResult = strResult.substring(0,lastLine);
+
+            if (__loaded < __fileInfo.total) {   //console.log(__fileInfo.total+","+__loaded);
+
+                __loaded = __loaded -  (options.step-lastLine);
+                options.reader.load(strResult);
+                __this.readBlob(__loaded);
+            } else {
+                __loaded = __fileInfo.total;
+                options.reader.load(strResult,true);
+
+            }
+
+
+        }
+
+
+        var initialize=function(opts){
+
+             $.extend(true,options,opts);
+
+            __this.upload(options.file);
+        }
+
+
+        initialize(opts);
+
+        return this;
+
+    };
+
+
+
+    $(document).ready(function(){
+        $("#J_fileSubmit").click(function(){
+            FileUpload({
+                file:$("#J_file")[0],
+                reader:{
+                    progress:function(val){
+                      console.log(val);
+                    },
+                    load:function(str){
+                        console.log("111");
+                    }
+                }
+            })
+
+        })
+    });
+
+
+</script>
+</body>
+</html>

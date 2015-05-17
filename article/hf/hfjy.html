@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hfjy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>主要业务</h2>
+<ul>
+<li>在线课程1V1</li>
+<li>移动作业本</li>
+<li>在线学习规划</li>
+<li>在线学习题库</li>
+</ul>
+<h3>咨询业务问题</h3>
+<ul>
+<li>太多的业务咨询依赖于，聊天的数据及问题数据是否可分析</li>
+<li>一年的53kf平台使用费用为多少</li>
+<li>客服是否是实时的。咨询内容是否可以分为 实时和非实时的渠道解决</li>
+</ul>
+<h4>网站内容层次混乱，重复，不突出，缺乏梳理</h4>
+<p>比如：</p>
+<ul>
+<li>公开课</li>
+</ul>
+<p>1V1课程学习中心的介绍和平台缺乏整合。如：http://vip.hfjy.com/cjkc/</p>
+<pre><code>在这里有详细介绍，http://vip.hfjy.com/cjkc/
+首页有详细介绍  http://www.hfjy.com/html/stu_index.html
+这有详细介绍  http://www.hfjy.com/html/stu_online.html
+这里有详细介绍  http://vip.hfjy.com/home/xuekefudao/
+
+而需要的应该只有两处：主站，1v1学习中心站
+</code></pre>
+
+<h4>域名问题：</h4>
+<pre><code>域名使用的目的不清晰，每一个域名及子域名都是入程序开发模块一样，有目的性指引的，但域名也是品牌价值的索引。
+
+- hyphen100.com = vip.hyjy.com 用在了推广上面，只用了2次
+- http://m.hyphen100.com/
+- hyjy.com
+- vip.hyjy.com
+
+导航菜单的域名切换太乱，且不利于整个站点的PR统计
+</code></pre>
+
+<h3>站点内容</h3>
+<p>hfjy.com 与 vip.hfjy.com什么关系</p>
+<p>蓝色的默认为链接，容易让人误解为点击</p>
+<h3>www.hfjy.com</h3>
+<p>vip.hfjy.com里面的教学成果的“查看详情”到达了这个首页</p>
+<ul>
+<li>首页中的海风优势，选课中心，在线1v1的滑动导航页面效果不妥当，页面太跳跃。点击后的内容和当行内容不是很契合</li>
+<li>首页的“选课中心”的几个内容，点击直接弹开53kf，体验不好</li>
+<li>“选课中心”的链接跳转内容和选课中心太跳跃，跳转过去的地方实际大概是“高考志愿辅导以及面试的内容”</li>
+</ul>
+<h4>vip.hfjy.com</h4>
+<pre><code>首页等内容多为图片 
+</code></pre>
+
+<p>站点内容：</p>
+<pre><code>公司介绍与公司业务介绍混杂不清
+</code></pre>
+
+<p>首页，有一下四块内容，但只有首页有入口，导航层面没有</p>
+<pre><code>- 留学咨询
+- 学科培优
+- 公益服务
+- 升学辅导
+</code></pre>
+
+<h3>其他问题</h3>
+<pre><code>- 咨询客服的浮层，挡在了用户的视野中，而且是不是切换页面会弹到视野
+- 浮层中的四个链接都是弹出了对话框，有的应该引流到学习咨询区”的
+- 城市的切换有什么影响么。
+- 太多的“关于海风”的类似的介绍，比如  公开课视频下方的东西，且有重复的 “关于海风”的内容相关，http://vip.hfjy.com/new-about/
+- 关注海风，帮助中心的一些内容的形式不够恰当，占用过多篇幅（首页下方的可以），作为公共部分放在了过多的页面
+- 太多的页面才有点击在新窗口的打开方式
+- 账户不互通：录取啦和学习中心账号
+- 页面资料的跳转，导航很缺失。
+    - hfjy.com跳转到vip.hfjy.com之后，两站之间的内容其实是类似的，且导航缺失
+    - 很多重要的内容，在导航都没有入口，一旦路径迷失，很换乱在哪里看到过什么内容
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
