@@ -5,13 +5,24 @@
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+
+
+
+    <style>
+
+
+        video {
+            max-width: 320px;
+            max-height: 320px;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-<talbe>
+<table>
     <tr>
         <th>Local Video</th><th>远程Video</th>
     </tr>
@@ -30,7 +41,7 @@
 
         </td>
     </tr>
-</talbe>
+</table>
 
 
 
@@ -65,7 +76,7 @@
         startButton.disabled = true;
 
 
-        RTC.monitor({audio:true, video:false}, function(stream){
+        RTC.monitor({audio:false, video:true}, function(stream){
             log("Received local stream");
             localVideo.src = RTC.getMediaUrl(stream);
             localStream = stream;
