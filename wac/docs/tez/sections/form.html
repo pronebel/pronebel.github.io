@@ -1,0 +1,291 @@
+<div class="bs-docs-section" id="J_button">
+
+
+    <h1 id="form" class="page-header">表单</h1>
+
+    <h2 id="form-example">基本示例</h2>
+
+    <div class="bs-example">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+
+    <h2 class="form-inline">内联表单</h2>
+    <div class="bs-example">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2">Name</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+            </div>
+            <button   class="btn btn-default">Send invitation</button>
+        </form>
+    </div>
+    <div class="bs-example">
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+            <button   class="btn btn-primary">Transfer cash</button>
+        </form>
+    </div>
+
+    <h2 id="form-horizontal">水平排列的表单</h2>
+    <div class="bs-example">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <p class="form-control-static">静态文字内容</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control"  placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">Text</label>
+                <div class="col-sm-10">
+                    <input type="Text" class="form-control"  placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">Textarea</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">disabled</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                </div>
+            </div>
+            <div class="form-group">
+                <label  class="col-sm-2 control-label">只读</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+                </div>
+            </div>
+
+
+            <div class="form-group has-success has-feedback">
+                <label class="col-sm-2  control-label" for="inputSuccess1">校验成功</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputSuccess1">
+                    <span class="glyphicon glyphicon-ok form-control-feedback" ></span>
+                    <div class="help-block">成功提示</div>
+                </div>
+            </div>
+            <div class="form-group has-warning has-feedback">
+                <label class="col-sm-2   control-label" for="inputWarn">警告</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputWarn">
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback" ></span>
+                    <div class="help-block">警告提示</div>
+                </div>
+            </div>
+            <div class="form-group has-error has-feedback">
+                <label class=" col-sm-2  control-label" for="inputFail">失败</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputFail">
+                    <span class="glyphicon glyphicon-remove form-control-feedback" ></span>
+                    <div class="help-block">失败提示</div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="J_select" class="col-sm-2 control-label">Select</label>
+                <div class="col-sm-10">
+                    <select id="J_select" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+
+
+                        <label class="tz-checkbox">
+                            <input type="checkbox">
+                            <i class="fa fa-check-square checked"></i>
+                            <i class="fa fa-square-o unchecked"></i>
+                            checkbox2
+                        </label>
+
+                        <label class="tz-checkbox">
+                            <input type="checkbox">
+                            <i class="fa fa-check-square checked"></i>
+                            <i class="fa fa-square-o unchecked"></i>
+                            Remember me
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+
+    <h2>多选框与单选框</h2>
+    <div class="bs-example">
+        <label class="tz-checkbox">
+            <input type="checkbox">
+            <i class="fa fa-check-square checked"></i>
+            <i class="fa fa-square-o unchecked"></i>
+            checkbox2
+        </label>
+        <label class="tz-checkbox">
+            <input type="checkbox">
+            <i class="fa fa-check-square checked"></i>
+            <i class="fa fa-square-o unchecked"></i>
+            checkbox2
+        </label>
+        <label class="tz-checkbox">
+            <input type="checkbox">
+            <i class="fa fa-check-square checked"></i>
+            <i class="fa fa-square-o unchecked"></i>
+            checkbox2
+        </label>
+
+
+        <label class="tz-radio">
+            <input type="radio" name="test">
+            <i class="fa fa-dot-circle-o checked"></i>
+            <i class="fa fa-circle-o unchecked"></i>
+            radio test
+        </label>
+        <label class="tz-radio">
+            <input type="radio" name="test">
+            <i class="fa fa-dot-circle-o checked"></i>
+            <i class="fa fa-circle-o unchecked"></i>
+            radio test
+        </label>
+        <label class="tz-radio">
+            <input type="radio" name="test">
+            <i class="fa fa-dot-circle-o checked"></i>
+            <i class="fa fa-circle-o unchecked"></i>
+            radio test
+        </label>
+    </div>
+    <div class="bs-example">
+        <h3>单选/多选 内联</h3>
+        <div>
+            <label class="tz-checkbox tz-checkbox-inline">
+                <input type="checkbox">
+                <i class="fa fa-check-square checked"></i>
+                <i class="fa fa-square-o unchecked"></i>
+                checkbox2
+            </label>
+            <label class="tz-checkbox  tz-checkbox-inline">
+                <input type="checkbox">
+                <i class="fa fa-check-square checked"></i>
+                <i class="fa fa-square-o unchecked"></i>
+                checkbox2
+            </label>
+            <label class="tz-checkbox2  tz-checkbox-inline">
+                <input type="checkbox">
+
+                checkbox2
+            </label>
+        </div>
+
+        <div>
+            <label class="tz-radio tz-radio-inline">
+                <input type="radio" name="test">
+                <i class="fa fa-dot-circle-o checked"></i>
+                <i class="fa fa-circle-o unchecked"></i>
+                radio test
+            </label>
+            <label class="tz-radio  tz-radio-inline">
+                <input type="radio" name="test">
+                <i class="fa fa-dot-circle-o checked"></i>
+                <i class="fa fa-circle-o unchecked"></i>
+                radio test
+            </label>
+            <label class="tz-radio  tz-radio-inline">
+                <input type="radio" name="test">
+                <i class="fa fa-dot-circle-o checked"></i>
+                <i class="fa fa-circle-o unchecked"></i>
+                radio test
+            </label>
+        </div>
+    </div>
+
+    <h2>控件尺寸</h2>
+    <p>通过 <code>.input-lg</code> 类似的类可以为控件设置高度，通过 <code>.col-lg-*</code> 类似的类可以为控件设置宽度。</p>
+    <div class="bs-example bs-example-control-sizing ">
+        <div class="controls">
+            <input class="form-control input-lg" type="text" placeholder=".input-lg">
+            <input type="text" class="form-control" placeholder="Default input">
+            <input class="form-control input-sm" type="text" placeholder=".input-sm">
+
+            <select class="form-control input-lg">
+                <option value="">.input-lg</option>
+            </select>
+            <select class="form-control">
+                <option value="">Default select</option>
+            </select>
+            <select class="form-control input-sm">
+                <option value="">.input-sm</option>
+            </select>
+        </div>
+    </div>
+
+
+
+
+</div>
